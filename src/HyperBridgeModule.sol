@@ -10,7 +10,7 @@ contract HyperBridgeModule is Owned, IBridgeModule {
     uint32 public thisChainId;
     uint32[] private destinationList;
     mapping(uint32 => address) private destinationToRecipient;
-
+    //TODO: add conversion mapping
     address public exitNode;
     IMailbox outbox;
     IMailbox inbox;
@@ -40,11 +40,11 @@ contract HyperBridgeModule is Owned, IBridgeModule {
         return false;
     }
 
-    constructor(address _exitNode, uint32 _chainId, address _inbox, address _outbox, address admin) Owned(admin) {
-        exitNode = _exitNode;
+    constructor(uint32 _chainId, address _inbox, address _mailbox) Owned(admin) {
+        exitNode = msg.sender;
         thisChainId = _chainId;
-        outbox = IMailbox(_outbox);
-        inbox = IMailbox(_inbox);
+        outbox = IMailbox(_mailbox);
+        inbox = IMailbox(_mailbox);
     }
 
     function broadcastRegister(uint256 newVaultId) external onlyExitNode {
@@ -62,6 +62,7 @@ contract HyperBridgeModule is Owned, IBridgeModule {
 
     function handle(uint32 _origin, bytes32 _sender, bytes calldata _message) external {
         //TODO have a modifier so only the bridge can call this function
+        //TODO: add a mapping from destination to recipient to verify that it is an actual recipient
         (uint256 vaultId, uint32 _otherChainId, uint256 gasFee) = abi.decode(_message, (uint256, uint32, uint256));
         IExitNode(exitNode).registerRedeem(vaultId, _otherChainId, gasFee);
         emit ReceivedMessage(_origin, _sender, _message);

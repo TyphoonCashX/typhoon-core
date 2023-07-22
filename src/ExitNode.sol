@@ -54,15 +54,16 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
 
     // constructor
 
-    constructor(address _tokenAddress, bytes16 _appId)
+    constructor(address _tokenAddress, bytes16 _appId, uint32 _chainId, address _inbox, address _outbox)
         SismoConnect(buildConfig(_appId, _isImpersonationMode))
         Owned(msg.sender)
     {
         tokenAddress = _tokenAddress;
+        _deployHyperBridgeModule(_chainId, _inbox, _outbox);
     }
 
     function _deployHyperBridgeModule(uint32 _chainId, address _inbox, address _outbox) private onlyOwner {
-        bridgeModuleAddress = address(new HyperBridgeModule(address(this), _chainId, _inbox, _outbox, msg.sender));
+        bridgeModuleAddress = address(new HyperBridgeModule(_chainId, _inbox, _outbox, msg.sender));
     }
 
     /**
