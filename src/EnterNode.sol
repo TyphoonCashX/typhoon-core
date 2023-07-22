@@ -5,30 +5,18 @@ import "./IEnterNode.sol";
 import "openzeppelin/token/ERC20/IERC20.sol";
 
 contract EnterNode is IEnterNode {
-
     // constants and state variables
 
-    uint256 public constant DEPOSIT_AMOUNT = 10 * 10**18;
+    uint256 public constant DEPOSIT_AMOUNT = 10 * 10 ** 18;
     address[] public registry;
 
-    // events 
+    // events
 
-    event FireDeposit(address indexed sender);    
+    event FireDeposit(address indexed sender);
 
-    function deposit() external payable returns (bool) {
-
-        
-        bool tx_emitted = IERC20(msg.sender).transferFrom(
-            msg.sender,
-            address(this),
-            DEPOSIT_AMOUNT);
-        
+    function deposit() external payable {
+        IERC20(msg.sender).transferFrom(msg.sender, address(this), DEPOSIT_AMOUNT);
         registry.push(msg.sender);
-        
         emit FireDeposit(msg.sender);
-
-        return tx_emitted;
-        
     }
-
 }

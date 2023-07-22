@@ -1,0 +1,1187 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "contractName",
+          "type": "string"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "contractNameHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAll",
+      "outputs": [
+        {
+          "internalType": "string[]",
+          "name": "",
+          "type": "string[]"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "contractNamesHash",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "getBatch",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string[]",
+          "name": "contractNames",
+          "type": "string[]"
+        }
+      ],
+      "name": "getBatch",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "contractAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "contractName",
+          "type": "string"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "contractAddresses",
+          "type": "address[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "contractNames",
+          "type": "string[]"
+        }
+      ],
+      "name": "setBatch",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "get(bytes32)": "8eaa6ac0",
+    "get(string)": "693ec85e",
+    "getAll()": "53ed5143",
+    "getBatch(bytes32[])": "50a5fd68",
+    "getBatch(string[])": "cfe35701",
+    "set(address,string)": "5a82d100",
+    "setBatch(address[],string[])": "61d1535f"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"contractName\",\"type\":\"string\"}],\"name\":\"get\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"contractNameHash\",\"type\":\"bytes32\"}],\"name\":\"get\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAll\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"},{\"internalType\":\"bytes32[]\",\"name\":\"\",\"type\":\"bytes32[]\"},{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"contractNamesHash\",\"type\":\"bytes32[]\"}],\"name\":\"getBatch\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"contractNames\",\"type\":\"string[]\"}],\"name\":\"getBatch\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"contractAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"contractName\",\"type\":\"string\"}],\"name\":\"set\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"contractAddresses\",\"type\":\"address[]\"},{\"internalType\":\"string[]\",\"name\":\"contractNames\",\"type\":\"string[]\"}],\"name\":\"setBatch\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"get(bytes32)\":{\"details\":\"Returns the address of a contract.\",\"params\":{\"contractNameHash\":\"Hash of the name of the contract (bytes32).\"},\"returns\":{\"_0\":\"Address of the contract.\"}},\"get(string)\":{\"details\":\"Returns the address of a contract.\",\"params\":{\"contractName\":\"Name of the contract (string).\"},\"returns\":{\"_0\":\"Address of the contract.\"}},\"getAll()\":{\"details\":\"Returns the addresses of all contracts in `_contractNames`\",\"returns\":{\"_0\":\"Names, Hashed Names and Addresses of all contracts.\"}},\"getBatch(bytes32[])\":{\"details\":\"Returns the addresses of all contracts inputed.\",\"params\":{\"contractNamesHash\":\"Names of the contracts as strings.\"}},\"getBatch(string[])\":{\"details\":\"Returns the addresses of all contracts inputed.\",\"params\":{\"contractNames\":\"Names of the contracts as strings.\"}},\"set(address,string)\":{\"details\":\"Sets the address of a contract.\",\"params\":{\"contractAddress\":\"Address of the contract.\",\"contractName\":\"Name of the contract.\"}},\"setBatch(address[],string[])\":{\"details\":\"Sets the address of multiple contracts.\",\"params\":{\"contractAddresses\":\"Addresses of the contracts.\",\"contractNames\":\"Names of the contracts.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/sismo-connect-solidity/src/interfaces/IAddressesProvider.sol\":\"IAddressesProvider\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ccip-cross-chain-name-service/=lib/ccip-cross-chain-name-service/contracts/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":hyperlane-quickstart/=lib/hyperlane-quickstart/contracts/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":sismo-connect-solidity/=lib/sismo-connect-solidity/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/sismo-connect-solidity/src/interfaces/IAddressesProvider.sol\":{\"keccak256\":\"0x7088a8721bb95c4d2ae77db038542e3afccfdb5772a9f6af500098f34514369e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://80cbf6bd03d96a9ef936b00d3cc7041e74e88ae6aa3bd6d8ab5a87a3c1eb7092\",\"dweb:/ipfs/QmTxXhUhPC9siLtnudFpqtcV1JsJyDULmTV17F1NQdKFy7\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "contractName",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "get",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "contractNameHash",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "get",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAll",
+          "outputs": [
+            {
+              "internalType": "string[]",
+              "name": "",
+              "type": "string[]"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32[]",
+              "name": "contractNamesHash",
+              "type": "bytes32[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getBatch",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string[]",
+              "name": "contractNames",
+              "type": "string[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getBatch",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "contractName",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "set"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address[]",
+              "name": "contractAddresses",
+              "type": "address[]"
+            },
+            {
+              "internalType": "string[]",
+              "name": "contractNames",
+              "type": "string[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setBatch"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "get(bytes32)": {
+            "details": "Returns the address of a contract.",
+            "params": {
+              "contractNameHash": "Hash of the name of the contract (bytes32)."
+            },
+            "returns": {
+              "_0": "Address of the contract."
+            }
+          },
+          "get(string)": {
+            "details": "Returns the address of a contract.",
+            "params": {
+              "contractName": "Name of the contract (string)."
+            },
+            "returns": {
+              "_0": "Address of the contract."
+            }
+          },
+          "getAll()": {
+            "details": "Returns the addresses of all contracts in `_contractNames`",
+            "returns": {
+              "_0": "Names, Hashed Names and Addresses of all contracts."
+            }
+          },
+          "getBatch(bytes32[])": {
+            "details": "Returns the addresses of all contracts inputed.",
+            "params": {
+              "contractNamesHash": "Names of the contracts as strings."
+            }
+          },
+          "getBatch(string[])": {
+            "details": "Returns the addresses of all contracts inputed.",
+            "params": {
+              "contractNames": "Names of the contracts as strings."
+            }
+          },
+          "set(address,string)": {
+            "details": "Sets the address of a contract.",
+            "params": {
+              "contractAddress": "Address of the contract.",
+              "contractName": "Name of the contract."
+            }
+          },
+          "setBatch(address[],string[])": {
+            "details": "Sets the address of multiple contracts.",
+            "params": {
+              "contractAddresses": "Addresses of the contracts.",
+              "contractNames": "Names of the contracts."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "ccip-cross-chain-name-service/=lib/ccip-cross-chain-name-service/contracts/",
+        "ds-test/=lib/solmate/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "hyperlane-quickstart/=lib/hyperlane-quickstart/contracts/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        "sismo-connect-solidity/=lib/sismo-connect-solidity/src/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/sismo-connect-solidity/src/interfaces/IAddressesProvider.sol": "IAddressesProvider"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/sismo-connect-solidity/src/interfaces/IAddressesProvider.sol": {
+        "keccak256": "0x7088a8721bb95c4d2ae77db038542e3afccfdb5772a9f6af500098f34514369e",
+        "urls": [
+          "bzz-raw://80cbf6bd03d96a9ef936b00d3cc7041e74e88ae6aa3bd6d8ab5a87a3c1eb7092",
+          "dweb:/ipfs/QmTxXhUhPC9siLtnudFpqtcV1JsJyDULmTV17F1NQdKFy7"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/sismo-connect-solidity/src/interfaces/IAddressesProvider.sol",
+    "id": 2830,
+    "exportedSymbols": {
+      "IAddressesProvider": [
+        2829
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1741:2",
+    "nodes": [
+      {
+        "id": 2761,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:2",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 2829,
+        "nodeType": "ContractDefinition",
+        "src": "58:1714:2",
+        "nodes": [
+          {
+            "id": 2769,
+            "nodeType": "FunctionDefinition",
+            "src": "245:75:2",
+            "nodes": [],
+            "documentation": {
+              "id": 2762,
+              "nodeType": "StructuredDocumentation",
+              "src": "91:151:2",
+              "text": " @dev Sets the address of a contract.\n @param contractAddress Address of the contract.\n @param contractName Name of the contract."
+            },
+            "functionSelector": "5a82d100",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "set",
+            "nameLocation": "254:3:2",
+            "parameters": {
+              "id": 2767,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2764,
+                  "mutability": "mutable",
+                  "name": "contractAddress",
+                  "nameLocation": "266:15:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2769,
+                  "src": "258:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2763,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "258:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2766,
+                  "mutability": "mutable",
+                  "name": "contractName",
+                  "nameLocation": "297:12:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2769,
+                  "src": "283:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2765,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "283:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "257:53:2"
+            },
+            "returnParameters": {
+              "id": 2768,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "319:0:2"
+            },
+            "scope": 2829,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2779,
+            "nodeType": "FunctionDefinition",
+            "src": "494:98:2",
+            "nodes": [],
+            "documentation": {
+              "id": 2770,
+              "nodeType": "StructuredDocumentation",
+              "src": "324:167:2",
+              "text": " @dev Sets the address of multiple contracts.\n @param contractAddresses Addresses of the contracts.\n @param contractNames Names of the contracts."
+            },
+            "functionSelector": "61d1535f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBatch",
+            "nameLocation": "503:8:2",
+            "parameters": {
+              "id": 2777,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2773,
+                  "mutability": "mutable",
+                  "name": "contractAddresses",
+                  "nameLocation": "531:17:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2779,
+                  "src": "512:36:2",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2771,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "512:7:2",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2772,
+                    "nodeType": "ArrayTypeName",
+                    "src": "512:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2776,
+                  "mutability": "mutable",
+                  "name": "contractNames",
+                  "nameLocation": "568:13:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2779,
+                  "src": "550:31:2",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2774,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "550:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 2775,
+                    "nodeType": "ArrayTypeName",
+                    "src": "550:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "511:71:2"
+            },
+            "returnParameters": {
+              "id": 2778,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "591:0:2"
+            },
+            "scope": 2829,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2787,
+            "nodeType": "FunctionDefinition",
+            "src": "747:73:2",
+            "nodes": [],
+            "documentation": {
+              "id": 2780,
+              "nodeType": "StructuredDocumentation",
+              "src": "596:148:2",
+              "text": " @dev Returns the address of a contract.\n @param contractName Name of the contract (string).\n @return Address of the contract."
+            },
+            "functionSelector": "693ec85e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nameLocation": "756:3:2",
+            "parameters": {
+              "id": 2783,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2782,
+                  "mutability": "mutable",
+                  "name": "contractName",
+                  "nameLocation": "774:12:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2787,
+                  "src": "760:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2781,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "760:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "759:28:2"
+            },
+            "returnParameters": {
+              "id": 2786,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2785,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2787,
+                  "src": "811:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2784,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "811:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "810:9:2"
+            },
+            "scope": 2829,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2795,
+            "nodeType": "FunctionDefinition",
+            "src": "992:71:2",
+            "nodes": [],
+            "documentation": {
+              "id": 2788,
+              "nodeType": "StructuredDocumentation",
+              "src": "824:165:2",
+              "text": " @dev Returns the address of a contract.\n @param contractNameHash Hash of the name of the contract (bytes32).\n @return Address of the contract."
+            },
+            "functionSelector": "8eaa6ac0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nameLocation": "1001:3:2",
+            "parameters": {
+              "id": 2791,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2790,
+                  "mutability": "mutable",
+                  "name": "contractNameHash",
+                  "nameLocation": "1013:16:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2795,
+                  "src": "1005:24:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2789,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1005:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1004:26:2"
+            },
+            "returnParameters": {
+              "id": 2794,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2793,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2795,
+                  "src": "1054:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2792,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1054:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1053:9:2"
+            },
+            "scope": 2829,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2805,
+            "nodeType": "FunctionDefinition",
+            "src": "1198:92:2",
+            "nodes": [],
+            "documentation": {
+              "id": 2796,
+              "nodeType": "StructuredDocumentation",
+              "src": "1067:128:2",
+              "text": " @dev Returns the addresses of all contracts inputed.\n @param contractNames Names of the contracts as strings."
+            },
+            "functionSelector": "cfe35701",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBatch",
+            "nameLocation": "1207:8:2",
+            "parameters": {
+              "id": 2800,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2799,
+                  "mutability": "mutable",
+                  "name": "contractNames",
+                  "nameLocation": "1234:13:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2805,
+                  "src": "1216:31:2",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2797,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1216:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 2798,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1216:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1215:33:2"
+            },
+            "returnParameters": {
+              "id": 2804,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2803,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2805,
+                  "src": "1272:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2801,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1272:7:2",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2802,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1272:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1271:18:2"
+            },
+            "scope": 2829,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2815,
+            "nodeType": "FunctionDefinition",
+            "src": "1429:97:2",
+            "nodes": [],
+            "documentation": {
+              "id": 2806,
+              "nodeType": "StructuredDocumentation",
+              "src": "1294:132:2",
+              "text": " @dev Returns the addresses of all contracts inputed.\n @param contractNamesHash Names of the contracts as strings."
+            },
+            "functionSelector": "50a5fd68",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBatch",
+            "nameLocation": "1438:8:2",
+            "parameters": {
+              "id": 2810,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2809,
+                  "mutability": "mutable",
+                  "name": "contractNamesHash",
+                  "nameLocation": "1466:17:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2815,
+                  "src": "1447:36:2",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_calldata_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2807,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1447:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 2808,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1447:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1446:38:2"
+            },
+            "returnParameters": {
+              "id": 2814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2813,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2815,
+                  "src": "1508:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2811,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1508:7:2",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2812,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1508:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1507:18:2"
+            },
+            "scope": 2829,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2828,
+            "nodeType": "FunctionDefinition",
+            "src": "1676:94:2",
+            "nodes": [],
+            "documentation": {
+              "id": 2816,
+              "nodeType": "StructuredDocumentation",
+              "src": "1530:143:2",
+              "text": " @dev Returns the addresses of all contracts in `_contractNames`\n @return Names, Hashed Names and Addresses of all contracts."
+            },
+            "functionSelector": "53ed5143",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAll",
+            "nameLocation": "1685:6:2",
+            "parameters": {
+              "id": 2817,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1691:2:2"
+            },
+            "returnParameters": {
+              "id": 2827,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2820,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2828,
+                  "src": "1717:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2818,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1717:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 2819,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1717:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2823,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2828,
+                  "src": "1734:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2821,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1734:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 2822,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1734:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2826,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2828,
+                  "src": "1752:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2824,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1752:7:2",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2825,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1752:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1716:53:2"
+            },
+            "scope": 2829,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAddressesProvider",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          2829
+        ],
+        "name": "IAddressesProvider",
+        "nameLocation": "68:18:2",
+        "scope": 2830,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 2
+}
