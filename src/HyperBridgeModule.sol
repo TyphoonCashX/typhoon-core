@@ -72,10 +72,10 @@ contract HyperBridgeModule is Owned, IBridgeModule {
         inbox = IMailbox(_inbox);
     }
 
-
-
     /**
+    @dev interface
      */
+
 
     function broadcastRegister(uint256 newVaultId) external onlyExitNode {
         bytes memory encoded = abi.encodePacked(newVaultId);
@@ -89,6 +89,13 @@ contract HyperBridgeModule is Owned, IBridgeModule {
             emit SentMessage(_destinationDomain, recipient, encoded);
         }
     }
+
+    /**
+    @notice send messages
+    @param _origin : chain id of the chain of origin 
+    @param _sender : transactions sender 
+    @param _message : broadcasted message
+     */
 
     function handle(uint32 _origin, bytes32 _sender, bytes calldata _message) external {
         //TODO have a modifier so only the bridge can call this function
