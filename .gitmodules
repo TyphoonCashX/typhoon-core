@@ -7,3 +7,6 @@
 [submodule "lib/ccip-cross-chain-name-service"]
 	path = lib/ccip-cross-chain-name-service
 	url = https://github.com/TyphoonCashX/ccip-cross-chain-name-service
+[submodule "lib/sismo-connect-solidity"]
+	path = lib/sismo-connect-solidity
+	url = https://github.com/sismo-core/sismo-connect-solidity
