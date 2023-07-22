@@ -14,8 +14,8 @@ contract ExitNode is IExitNode, SismoConnect {
     uint256 public constant N_BLOCKS_DELAY = 1;
     address public constant ZERO_ADDRESS = address(0x0);
     uint256 public constant DEPOSIT_AMOUNT = 10 * 10 ** 18;
-    address public constant TOKEN_ADDRESS = address(0x0);
 
+    address public tokenAddress;
     // maps vaultId => boolean, and tracks if claimed was already made or not
     mapping(uint256 => bool) public isClaimed;
 
@@ -40,7 +40,10 @@ contract ExitNode is IExitNode, SismoConnect {
 
     // constructor
 
-    constructor() SismoConnect(buildConfig(_appId, _isImpersonationMode)) {}
+    constructor(address _tokenAddress)
+     SismoConnect(buildConfig(_appId, _isImpersonationMode)) {
+        tokenAddress = _tokenAddress;
+     }
 
     function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external {
         if (outputAddress == ZERO_ADDRESS) {
@@ -80,10 +83,12 @@ contract ExitNode is IExitNode, SismoConnect {
 
         PendingRedeem storage pendingRedeem = vaultIdToRedeemInformation[vaultId];
         uint256 gas = pendingRedeem.gasFee + withdrawGasFee;
-        IERC20 bridgedToken = IERC20(TOKEN_ADDRESS);
+        IERC20 bridgedToken = IERC20(tokenAddress);
 
         if (keccak256(abi.encode(pendingRedeem)) == nullRedeemInformation) {
+
             revert notInPendingList(vaultId);
+
         }
 
         bridgedToken.transferFrom(msg.sender, address(this), gas);
