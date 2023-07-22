@@ -3,11 +3,12 @@ pragma solidity ^0.8.13;
 
 import "solmate/auth/Owned.sol";
 import "hyperlane-monorepo/solidity/contracts/interfaces/IMailbox.sol";
+import "./IBridgeModule.sol";
 
 import "./IExitNode.sol";
 
-contract HyperBridge is Owned {
-    uint32 chainId; 
+contract HyperBridgeModule is Owned, IBridgeModule {
+    uint32 public thisChainId; 
     uint32[] private destinationList;
     mapping(uint32 => address) private destinationToRecipient;
 
@@ -41,16 +42,16 @@ contract HyperBridge is Owned {
     }
 
     constructor(address _exitNode, uint32 _chainId, address _inbox, address _outbox, address admin) 
-    Owned(msg.sender){
+    Owned(admin){
         exitNode = _exitNode;
-        chainId = _chainId;
+        thisChainId = _chainId;
         outbox = IMailbox(_outbox);
         inbox = IMailbox(_inbox);
     }
     
     function broadcastRegister(
         uint256 newVaultId
-    ) external onlyEnterNode {
+    ) external onlyExitNode {
         bytes memory encoded = abi.encodePacked(newVaultId);
         uint32 _destinationDomain; 
         address _destinationRecipient;
@@ -70,9 +71,19 @@ contract HyperBridge is Owned {
         bytes32 _sender,
         bytes calldata _message
     ) external { //TODO have a modifier so only the bridge can call this function
-        (uint256 vaultId) = abi.decode(_message, (uint256));
-        //TODO: call EnterNode contract
+        (uint256 vaultId, uint32 _otherChainId, uint256 gasFee) = abi.decode(_message, (uint256, uint32, uint256));
+        IExitNode(exitNode).registerRedeem(vaultId, _otherChainId, gasFee);
         emit ReceivedMessage(_origin, _sender, _message);
     }
+
+
+    //// modifier
+
+    //modifier onlyBridgeAdapter(address caller) {
+        //if (caller != hyperBridgeAddress){
+            //revert isNotHyperplaneCaller(caller);
+        //}
+        //_;
+    //}
 
 }
