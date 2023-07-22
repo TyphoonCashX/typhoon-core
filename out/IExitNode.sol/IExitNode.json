@@ -19,13 +19,7 @@
         }
       ],
       "name": "redeem",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
+      "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
     },
@@ -43,13 +37,7 @@
         }
       ],
       "name": "withdraw",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
+      "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
     }
@@ -68,7 +56,7 @@
     "redeem(bytes,uint256,address)": "c8841c80",
     "withdraw(uint256,uint256)": "441a3e70"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"response\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"redeemGasFee\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"outputAddress\",\"type\":\"address\"}],\"name\":\"redeem\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"withdrawGasFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"withdraw(uint256,uint256)\":{\"notice\":\"Delay gas payment to the relayment.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/IExitNode.sol\":\"IExitNode\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ccip-cross-chain-name-service/=lib/ccip-cross-chain-name-service/contracts/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":hyperlane-quickstart/=lib/hyperlane-quickstart/contracts/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":sismo-connect-solidity/=lib/sismo-connect-solidity/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/IExitNode.sol\":{\"keccak256\":\"0xc6296b95e7c2e3203fd383a3908dd051c2ceca9d9f0b8eb59cbcca23f0f1a935\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8770702ca684f6a15f21199da6cc5ed6f4391fac54bada45e5fc362add6fdc35\",\"dweb:/ipfs/QmQfQSKTfGppnL9X7KczZHgp567o2gfHqqhDLXpUnECx6T\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"response\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"redeemGasFee\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"outputAddress\",\"type\":\"address\"}],\"name\":\"redeem\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"withdrawGasFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"redeem(bytes,uint256,address)\":{\"notice\":\"Redeem funds.\"},\"withdraw(uint256,uint256)\":{\"notice\":\"Delay gas payment to the relayment.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/IExitNode.sol\":\"IExitNode\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ccip-cross-chain-name-service/=lib/ccip-cross-chain-name-service/contracts/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":hyperlane-quickstart/=lib/hyperlane-quickstart/contracts/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":sismo-connect-solidity/=lib/sismo-connect-solidity/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/IExitNode.sol\":{\"keccak256\":\"0x7c3a14092658c060cc866c5c643b512b999a2d3f54edef75e903fdc63edced4d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://0b12d76c85be122137e1f95c004d1c5650cd3f5cc888f432bca9357f27ac670b\",\"dweb:/ipfs/QmRiLAHPZ5WVqdiCKjGAvcXebxJUGaiEU2CuTohZYzRNgv\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.19+commit.7dd6d404"
@@ -96,14 +84,7 @@
           ],
           "stateMutability": "nonpayable",
           "type": "function",
-          "name": "redeem",
-          "outputs": [
-            {
-              "internalType": "bool",
-              "name": "",
-              "type": "bool"
-            }
-          ]
+          "name": "redeem"
         },
         {
           "inputs": [
@@ -120,14 +101,7 @@
           ],
           "stateMutability": "nonpayable",
           "type": "function",
-          "name": "withdraw",
-          "outputs": [
-            {
-              "internalType": "bool",
-              "name": "",
-              "type": "bool"
-            }
-          ]
+          "name": "withdraw"
         }
       ],
       "devdoc": {
@@ -138,6 +112,9 @@
       "userdoc": {
         "kind": "user",
         "methods": {
+          "redeem(bytes,uint256,address)": {
+            "notice": "Redeem funds."
+          },
           "withdraw(uint256,uint256)": {
             "notice": "Delay gas payment to the relayment."
           }
@@ -171,10 +148,10 @@
     },
     "sources": {
       "src/IExitNode.sol": {
-        "keccak256": "0xc6296b95e7c2e3203fd383a3908dd051c2ceca9d9f0b8eb59cbcca23f0f1a935",
+        "keccak256": "0x7c3a14092658c060cc866c5c643b512b999a2d3f54edef75e903fdc63edced4d",
         "urls": [
-          "bzz-raw://8770702ca684f6a15f21199da6cc5ed6f4391fac54bada45e5fc362add6fdc35",
-          "dweb:/ipfs/QmQfQSKTfGppnL9X7KczZHgp567o2gfHqqhDLXpUnECx6T"
+          "bzz-raw://0b12d76c85be122137e1f95c004d1c5650cd3f5cc888f432bca9357f27ac670b",
+          "dweb:/ipfs/QmRiLAHPZ5WVqdiCKjGAvcXebxJUGaiEU2CuTohZYzRNgv"
         ],
         "license": "UNLICENSED"
       }
@@ -183,17 +160,17 @@
   },
   "ast": {
     "absolutePath": "src/IExitNode.sol",
-    "id": 5774,
+    "id": 5786,
     "exportedSymbols": {
       "IExitNode": [
-        5773
+        5785
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "39:394:13",
+    "src": "39:317:13",
     "nodes": [
       {
-        "id": 5751,
+        "id": 5766,
         "nodeType": "PragmaDirective",
         "src": "39:24:13",
         "nodes": [],
@@ -205,34 +182,40 @@
         ]
       },
       {
-        "id": 5773,
+        "id": 5785,
         "nodeType": "ContractDefinition",
-        "src": "66:367:13",
+        "src": "65:290:13",
         "nodes": [
           {
-            "id": 5762,
+            "id": 5776,
             "nodeType": "FunctionDefinition",
-            "src": "110:142:13",
+            "src": "126:93:13",
             "nodes": [],
+            "documentation": {
+              "id": 5767,
+              "nodeType": "StructuredDocumentation",
+              "src": "91:29:13",
+              "text": "Redeem funds."
+            },
             "functionSelector": "c8841c80",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "redeem",
-            "nameLocation": "119:6:13",
+            "nameLocation": "135:6:13",
             "parameters": {
-              "id": 5758,
+              "id": 5774,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5753,
+                  "id": 5769,
                   "mutability": "mutable",
                   "name": "response",
-                  "nameLocation": "148:8:13",
+                  "nameLocation": "155:8:13",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5762,
-                  "src": "135:21:13",
+                  "scope": 5776,
+                  "src": "142:21:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -240,10 +223,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 5752,
+                    "id": 5768,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "135:5:13",
+                    "src": "142:5:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -253,13 +236,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 5755,
+                  "id": 5771,
                   "mutability": "mutable",
                   "name": "redeemGasFee",
-                  "nameLocation": "174:12:13",
+                  "nameLocation": "173:12:13",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5762,
-                  "src": "166:20:13",
+                  "scope": 5776,
+                  "src": "165:20:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -267,10 +250,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5754,
+                    "id": 5770,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "166:7:13",
+                    "src": "165:7:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -280,13 +263,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 5757,
+                  "id": 5773,
                   "mutability": "mutable",
                   "name": "outputAddress",
-                  "nameLocation": "204:13:13",
+                  "nameLocation": "195:13:13",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5762,
-                  "src": "196:21:13",
+                  "scope": 5776,
+                  "src": "187:21:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -294,10 +277,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5756,
+                    "id": 5772,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "196:7:13",
+                    "src": "187:7:13",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -307,77 +290,49 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "125:93:13"
+              "src": "141:68:13"
             },
             "returnParameters": {
-              "id": 5761,
+              "id": 5775,
               "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 5760,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 5762,
-                  "src": "246:4:13",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 5759,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "246:4:13",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "245:6:13"
+              "parameters": [],
+              "src": "218:0:13"
             },
-            "scope": 5773,
+            "scope": 5785,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 5772,
+            "id": 5784,
             "nodeType": "FunctionDefinition",
-            "src": "315:111:13",
+            "src": "285:68:13",
             "nodes": [],
             "documentation": {
-              "id": 5763,
+              "id": 5777,
               "nodeType": "StructuredDocumentation",
-              "src": "258:51:13",
-              "text": "Delay gas payment to the relayment."
+              "src": "225:54:13",
+              "text": " Delay gas payment to the relayment."
             },
             "functionSelector": "441a3e70",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "withdraw",
-            "nameLocation": "324:8:13",
+            "nameLocation": "294:8:13",
             "parameters": {
-              "id": 5768,
+              "id": 5782,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5765,
+                  "id": 5779,
                   "mutability": "mutable",
                   "name": "withdrawGasFee",
-                  "nameLocation": "350:14:13",
+                  "nameLocation": "311:14:13",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5772,
-                  "src": "342:22:13",
+                  "scope": 5784,
+                  "src": "303:22:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -385,10 +340,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5764,
+                    "id": 5778,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "342:7:13",
+                    "src": "303:7:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -398,13 +353,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 5767,
+                  "id": 5781,
                   "mutability": "mutable",
                   "name": "vaultId",
-                  "nameLocation": "383:7:13",
+                  "nameLocation": "335:7:13",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5772,
-                  "src": "375:15:13",
+                  "scope": 5784,
+                  "src": "327:15:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -412,10 +367,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5766,
+                    "id": 5780,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "375:7:13",
+                    "src": "327:7:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -424,43 +379,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "332:59:13"
+              "src": "302:41:13"
             },
             "returnParameters": {
-              "id": 5771,
+              "id": 5783,
               "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 5770,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 5772,
-                  "src": "420:4:13",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 5769,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "420:4:13",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "419:6:13"
+              "parameters": [],
+              "src": "352:0:13"
             },
-            "scope": 5773,
+            "scope": 5785,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -473,11 +400,11 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          5773
+          5785
         ],
         "name": "IExitNode",
-        "nameLocation": "76:9:13",
-        "scope": 5774,
+        "nameLocation": "75:9:13",
+        "scope": 5786,
         "usedErrors": []
       }
     ],

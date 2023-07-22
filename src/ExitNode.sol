@@ -1,19 +1,21 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
+
 import "./IExitNode.sol";
 import "sismo-connect-solidity/SismoConnectLib.sol";
 import "sismo-connect-solidity/utils/SismoConnectHelper.sol";
 import "openzeppelin/token/ERC20/IERC20.sol";
 
+
 contract ExitNode is IExitNode, SismoConnect {
     using SismoConnectHelper for SismoConnectVerifiedResult;
 
-    bytes16 private _appId = 0;
     bool private _isImpersonationMode = true;
-    uint256 public constant N_BLOCKS_DELAY = 1;
+    uint8 public constant N_BLOCKS_DELAY = 1;
     address public constant ZERO_ADDRESS = address(0x0);
     uint256 public constant DEPOSIT_AMOUNT = 10 * 10 ** 18;
+
 
     address public tokenAddress;
     // maps vaultId => boolean, and tracks if claimed was already made or not
@@ -30,18 +32,23 @@ contract ExitNode is IExitNode, SismoConnect {
         abi.encode(PendingRedeem({vaultId: 0x0, outputAddress: address(0x0), releaseTimestamp: 0, gasFee: 0}))
     );
 
+
     // errors
     error isAlreadyClaimed(uint256 vaultId);
     error notInPendingList(uint256 vaultId);
     error zeroVaultId();
     error zeroAddress();
 
+
+
     mapping(uint256 => PendingRedeem) public vaultIdToRedeemInformation;
 
     // constructor
 
-    constructor(address _tokenAddress)
-     SismoConnect(buildConfig(_appId, _isImpersonationMode)) {
+    constructor(
+        address _tokenAddress,
+        bytes16 _appId) SismoConnect(buildConfig(_appId, _isImpersonationMode))
+      {
         tokenAddress = _tokenAddress;
      }
 
@@ -53,7 +60,10 @@ contract ExitNode is IExitNode, SismoConnect {
         SismoConnectVerifiedResult memory result = verify({
             responseBytes: response,
             auth: buildAuth({authType: AuthType.VAULT}),
-            signature: buildSignature({message: abi.encode(msg.sender)})
+            signature: buildSignature({message: abi.encode(
+                redeemGasFee
+
+            )})
         });
 
         uint256 vaultId = result.getUserId(AuthType.VAULT);
@@ -98,5 +108,7 @@ contract ExitNode is IExitNode, SismoConnect {
         delete vaultIdToRedeemInformation[vaultId];
 
         bridgedToken.transfer(pendingRedeem.outputAddress, DEPOSIT_AMOUNT - gas);
+
     }
+
 }
