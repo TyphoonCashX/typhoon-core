@@ -2,6 +2,7 @@ ccip-cross-chain-name-service/=lib/ccip-cross-chain-name-service/contracts/
 ds-test/=lib/solmate/lib/ds-test/src/
 erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/
 forge-std/=lib/forge-std/src/
+hyperlane-monorepo/=lib/hyperlane-monorepo/
 hyperlane-quickstart/=lib/hyperlane-quickstart/contracts/
 openzeppelin-contracts/=lib/openzeppelin-contracts/
 openzeppelin/=lib/openzeppelin-contracts/contracts/

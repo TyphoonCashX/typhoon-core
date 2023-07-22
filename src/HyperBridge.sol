@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "solmate/auth/Owned.sol";
-import "@hyperlane-xyz/core/interfaces/IMailbox.sol";
+import "hyperlane-monorepo/solidity/contracts/interfaces/IMailbox.sol";
 
 contract HyperBridge is Owned {
 
@@ -22,12 +22,15 @@ contract HyperBridge is Owned {
         require(msg.sender == enterNode, "not enter node");
         _;
     }
-
-    constructor(address _enterNode, uint32[] _destinationList, mapping(uint32 => address) _destinationRecipient, address _inbox, address _outbox) 
-    Owned(msg.sender){
-        enterNode = _enterNode;
+    
+    function editDestinationList(uint32[] calldata _destinationList, mapping(uint32 => address) calldata _destinationRecipient) external onlyOwner{
         destinationList = _destinationList;
         destinationRecipient = _destinationRecipient;
+    }
+
+    constructor(address _enterNode, address _inbox, address _outbox) 
+    Owned(msg.sender){
+        enterNode = _enterNode;
 
         outbox = IMailbox(_outbox);
         inbox = IMailbox(_inbox);
@@ -59,8 +62,4 @@ contract HyperBridge is Owned {
         emit ReceivedMessage(_origin, _sender, _message);
     }
 
-    function editDestinationList(uint32[] _destinationList, mapping(uint32 => address) _destinationRecipient) external onlyOwner{
-        destinationList = _destinationList;
-        destinationRecipient = _destinationRecipient;
-    } 
 }
