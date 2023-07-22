@@ -7,7 +7,7 @@ import "hyperlane-monorepo/solidity/contracts/interfaces/IMailbox.sol";
 import "./IExitNode.sol";
 
 contract HyperBridge is Owned {
-
+    uint32 chainId; 
     uint32[] private destinationList;
     mapping(uint32 => address) private destinationToRecipient;
 
@@ -40,10 +40,10 @@ contract HyperBridge is Owned {
         return false;
     }
 
-    constructor(address _enterNode, address _inbox, address _outbox) 
+    constructor(address _enterNode, uint32 _chainId, address _inbox, address _outbox) 
     Owned(msg.sender){
         enterNode = _enterNode;
-
+        chainId = _chainId;
         outbox = IMailbox(_outbox);
         inbox = IMailbox(_inbox);
     }
@@ -71,7 +71,7 @@ contract HyperBridge is Owned {
         bytes calldata _message
     ) external { //TODO have a modifier so only the bridge can call this function
         (uint256 vaultId) = abi.decode(_message, (uint256));
-        enter
+        //TODO: call EnterNode contract
         emit ReceivedMessage(_origin, _sender, _message);
     }
 
