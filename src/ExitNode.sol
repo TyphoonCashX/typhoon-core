@@ -50,7 +50,7 @@ contract ExitNode is IExitNode, SismoConnect {
     }
 
     /**
-     * @notice Function called to enter the pending registry, awaiting withdrawal
+     *  @notice Function called to enter the pending registry, awaiting withdrawal
      *  @param response : generated proof deposited for verification
      *  @param redeemGasFee : gas fee for redeeming, delegated to the relayer
      *  @param outputAddress : output address for the bridge, where the tokens will be deposited
