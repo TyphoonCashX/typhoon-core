@@ -61,8 +61,8 @@ contract ExitNode is IExitNode, SismoConnect {
             responseBytes: response,
             auth: buildAuth({authType: AuthType.VAULT}),
             signature: buildSignature({message: abi.encode(
-                redeemGasFee
-
+                redeemGasFee,
+                outputAddress
             )})
         });
 
