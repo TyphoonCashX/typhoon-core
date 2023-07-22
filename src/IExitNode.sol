@@ -14,5 +14,9 @@ interface IExitNode {
 
     function withdraw(uint256 withdrawGasFee, bytes memory response) external;
 
+    /**
+     * broadcast redeem information to other chains
+     */
+
     function registerRedeem(uint256 vaultId, uint32 _otherChainId, uint256 gasFee) external;
 }

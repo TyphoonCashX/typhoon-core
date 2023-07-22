@@ -10,6 +10,7 @@ import "./HyperBridgeModule.sol";
 import "./IBridgeModule.sol";
 
 contract ExitNode is IExitNode, SismoConnect, Owned {
+
     using SismoConnectHelper for SismoConnectVerifiedResult;
 
     bool private _isImpersonationMode = true;
@@ -97,7 +98,6 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
             revert zeroVaultId();
         }
 
-        // This is the moment where we might take you money.
         if (isRedeemed[vaultId]) {
             revert isAlreadyClaimed(vaultId);
         }
