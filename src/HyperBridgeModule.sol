@@ -40,7 +40,7 @@ contract HyperBridgeModule is Owned, IBridgeModule {
         return false;
     }
 
-    constructor(uint32 _chainId, address _inbox, address _mailbox) Owned(admin) {
+    constructor(uint32 _chainId, address _mailbox, address admin) Owned(admin) {
         exitNode = msg.sender;
         thisChainId = _chainId;
         outbox = IMailbox(_mailbox);
@@ -62,7 +62,7 @@ contract HyperBridgeModule is Owned, IBridgeModule {
 
     function handle(uint32 _origin, bytes32 _sender, bytes calldata _message) external {
         //TODO have a modifier so only the bridge can call this function
-        //TODO: add a mapping from destination to recipient to verify that it is an actual recipient
+        //TODO: add a mapping from destination to recipient to verify that it is an actual recipient with a setter
         (uint256 vaultId, uint32 _otherChainId, uint256 gasFee) = abi.decode(_message, (uint256, uint32, uint256));
         IExitNode(exitNode).registerRedeem(vaultId, _otherChainId, gasFee);
         emit ReceivedMessage(_origin, _sender, _message);
