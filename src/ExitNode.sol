@@ -5,8 +5,11 @@ import "./IExitNode.sol";
 import "sismo-connect-solidity/SismoConnectLib.sol";
 import "sismo-connect-solidity/utils/SismoConnectHelper.sol";
 import "openzeppelin/token/ERC20/IERC20.sol";
+import "solmate/auth/Owned.sol";
 
-contract ExitNode is IExitNode, SismoConnect {
+
+contract ExitNode is IExitNode, SismoConnect, Owned {
+
     using SismoConnectHelper for SismoConnectVerifiedResult;
 
     bool private _isImpersonationMode = true;
@@ -18,6 +21,7 @@ contract ExitNode is IExitNode, SismoConnect {
 
     // token address
     address public tokenAddress;
+    address public hyperBridgeAddress;
     // maps vaultId => boolean, and tracks if claimed was already made or not
     mapping(uint256 => bool) public isClaimed;
 
@@ -28,6 +32,7 @@ contract ExitNode is IExitNode, SismoConnect {
         uint256 releaseTimestamp;
         uint256 gasFee;
     }
+
 
     // empty struct encoding
     bytes32 public constant nullRedeemInformation = keccak256(
@@ -40,14 +45,30 @@ contract ExitNode is IExitNode, SismoConnect {
     error notInPendingList(uint256 vaultId);
     error zeroVaultId();
     error zeroAddress();
+    error isNotHyperplaneCaller(address callee);
+
 
     // mapping that associates vaultId to pending redeem information
     mapping(uint256 => PendingRedeem) public vaultIdToRedeemInformation;
 
-    // constructor
-    constructor(address _tokenAddress, bytes16 _appId) SismoConnect(buildConfig(_appId, _isImpersonationMode)) {
+
+    // modifier
+
+    modifier onlyBridgeAdapter(address caller) {
+        if (caller != hyperBridgeAddress){
+            revert isNotHyperplaneCaller(caller);
+        }
+        _;
+    }
+
+     // constructor 
+
+    constructor(address _tokenAddress, bytes16 _appId) 
+    SismoConnect(buildConfig(_appId, _isImpersonationMode))
+    Owned(msg.sender) {
         tokenAddress = _tokenAddress;
     }
+
 
     /**
      *  @notice Function called to enter the pending registry, awaiting withdrawal
@@ -129,5 +150,15 @@ contract ExitNode is IExitNode, SismoConnect {
         // Else, set to true.
 
         isClaimed[vaultId] = true;
+    }
+
+    function _deployHyperBridgeModule(
+         uint32 _chainId,
+         address _inbox,
+         address _outbox
+    ) private {
+        
+    
+
     }
 }
