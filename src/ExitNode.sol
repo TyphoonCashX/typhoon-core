@@ -48,6 +48,7 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     error zeroVaultId();
     error zeroAddress();
     error isNotHyperplaneCaller(address callee);
+    error GasFeeHigherThanWithdraw();
 
     // mapping that associates vaultId to pending redeem information
     mapping(uint256 => PendingRedeem) public vaultIdToRedeemInformation;
@@ -73,7 +74,13 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
      */
 
     //TODO: make this payable to get the money for the bridging
-    function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external {
+    function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external payable {
+        // make sur that gas fees are not higher than the maximal deposit amount.
+
+        if (redeemGasFee > DEPOSIT_AMOUNT) {
+            revert GasFeeHigherThanWithdraw();
+        }
+
         if (outputAddress == ZERO_ADDRESS) {
             revert zeroAddress();
         }
@@ -91,21 +98,25 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
         }
 
         // This is the moment where we might take you money.
-
         if (isRedeemed[vaultId]) {
             revert isAlreadyClaimed(vaultId);
         }
 
         isRedeemed[vaultId] = true;
 
-        vaultIdToRedeemInformation[vaultId] = PendingRedeem({
+        PendingRedeem memory pendingRedeem = PendingRedeem({
             vaultId: vaultId,
             outputAddress: outputAddress,
             releaseTimestamp: block.timestamp + N_BLOCKS_DELAY,
-            gasFee: redeemGasFee //TODO: redeemGasFee < Max_Withdraw
+            gasFee: redeemGasFee
         });
 
-        //TODO: broadcast
+        vaultIdToRedeemInformation[vaultId] = pendingRedeem;
+
+        // create the bridge module and broadcast the register.
+
+        IBridgeModule bridgeModule = IBridgeModule(bridgeModuleAddress);
+        bridgeModule.broadcastRegister(vaultId);
     }
 
     /**
@@ -114,11 +125,23 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
      * @param vaultId : vaultId of the user
      */
 
-    function withdraw(uint256 withdrawGasFee, uint256 vaultId) external {
-        //TODO: have a signature for the withdrawn gasfee
-        // verify if the vault Id is in the pending registry
+    function withdraw(uint256 withdrawGasFee, uint256 response) external {
+        // have a signature for the gas fee.
+
+        SismoConnectVerifiedResult memory result = verify({
+            responseBytes: response,
+            auth: buildAuth({authType: AuthType.VAULT}),
+            signature: buildSignature({message: abi.encodePacked(withdrawGasFee)})
+        });
+
+        uint256 vaultId = result.getUserId(AuthType.VAULT);
+
+        if (redeemGasFee > DEPOSIT_AMOUNT) {
+            revert GasFeeHigherThanWithdraw();
+        }
+
         PendingRedeem storage pendingRedeem = vaultIdToRedeemInformation[vaultId];
-        uint256 gas = pendingRedeem.gasFee + withdrawGasFee; //TODO: gasFee < maxWithdraw
+        uint256 gas = pendingRedeem.gasFee + withdrawGasFee;
         IERC20 bridgedToken = IERC20(tokenAddress);
 
         if (keccak256(abi.encode(pendingRedeem)) == nullRedeemInformation) {
