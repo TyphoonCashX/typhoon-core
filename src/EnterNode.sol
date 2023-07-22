@@ -13,7 +13,7 @@ contract EnterNode is IEnterNode {
 
     // events 
 
-    event FireDeposit(address indexed sender);    
+    event FireDeposit(address indexed sender);   
 
     function deposit() external payable returns (bool) {
 

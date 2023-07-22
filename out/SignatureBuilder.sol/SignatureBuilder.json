@@ -1,0 +1,2439 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "DEFAULT_SIGNATURE_REQUEST_EXTRA_DATA",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DEFAULT_SIGNATURE_REQUEST_IS_SELECTABLE_BY_USER",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DEFAULT_SIGNATURE_REQUEST_MESSAGE",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bool",
+          "name": "isSelectableByUser",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes",
+          "name": "extraData",
+          "type": "bytes"
+        }
+      ],
+      "name": "build",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct SignatureRequest",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isSelectableByUser",
+          "type": "bool"
+        }
+      ],
+      "name": "build",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct SignatureRequest",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "extraData",
+          "type": "bytes"
+        }
+      ],
+      "name": "build",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct SignatureRequest",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bool",
+          "name": "isSelectableByUser",
+          "type": "bool"
+        }
+      ],
+      "name": "build",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct SignatureRequest",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        }
+      ],
+      "name": "build",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct SignatureRequest",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isSelectableByUser",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes",
+          "name": "extraData",
+          "type": "bytes"
+        }
+      ],
+      "name": "build",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct SignatureRequest",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "buildEmpty",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct SignatureRequest",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50610703806100206000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c80636835f32c116100665780636835f32c1461022557806372915d89146102725780637476d1ac14610295578063800e65f214610304578063ac799cb31461036e57600080fd5b80631f785c95146100a35780633ed8572e146101005780635c4b7b60146101785780635de3b44c1461019057806364009b99146101d5575b600080fd5b6100ea6100b136600461045d565b60408051606080820183528082526000602083015291810191909152506040805160608101825293845291151560208401529082015290565b6040516100f79190610517565b60405180910390f35b6100ea61010e366004610565565b604080516060808201835280825260006020808401829052928401829052835160a08101855260189281019283527726a2a9a9a0a3a2afa9a2a622a1aa22a22fa12cafaaa9a2a960411b608082015291825293151581830152825191820183529281529082015290565b610180600081565b60405190151581526020016100f7565b6100ea61019e366004610587565b6040805160608082018352808252600060208301529181019190915250604080516060810182529283526000602084015282015290565b6100ea6101e33660046105eb565b60408051606080820183528082526000602080840182905292840182905283519182018452948152921515838201528151908101825292835281019190915290565b6100ea610233366004610639565b60408051606080820183528082526000602080840182905292840182905283519182018452938152808201849052825191820183529281529082015290565b6102886040518060200160405280600081525081565b6040516100f79190610676565b6100ea6102a3366004610689565b60408051606080820183528082526000602083015291810191909152506040805160a0810182526018606082019081527726a2a9a9a0a3a2afa9a2a622a1aa22a22fa12cafaaa9a2a960411b60808301528152921515602084015282015290565b604080516060808201835280825260006020808401829052928401829052835160a08101855260189281019283527726a2a9a9a0a3a2afa9a2a622a1aa22a22fa12cafaaa9a2a960411b6080820152918252818301819052835192830184528252918201526100ea565b6102886040518060400160405280601881526020017726a2a9a9a0a3a2afa9a2a622a1aa22a22fa12cafaaa9a2a960411b81525081565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126103cc57600080fd5b813567ffffffffffffffff808211156103e7576103e76103a5565b604051601f8301601f19908116603f0116810190828211818310171561040f5761040f6103a5565b8160405283815286602085880101111561042857600080fd5b836020870160208301376000602085830101528094505050505092915050565b8035801515811461045857600080fd5b919050565b60008060006060848603121561047257600080fd5b833567ffffffffffffffff8082111561048a57600080fd5b610496878388016103bb565b94506104a460208701610448565b935060408601359150808211156104ba57600080fd5b506104c7868287016103bb565b9150509250925092565b6000815180845260005b818110156104f7576020818501810151868301820152016104db565b506000602082860101526020601f19601f83011685010191505092915050565b60208152600082516060602084015261053360808401826104d1565b90506020840151151560408401526040840151601f1984830301606085015261055c82826104d1565b95945050505050565b60006020828403121561057757600080fd5b61058082610448565b9392505050565b6000806040838503121561059a57600080fd5b823567ffffffffffffffff808211156105b257600080fd5b6105be868387016103bb565b935060208501359150808211156105d457600080fd5b506105e1858286016103bb565b9150509250929050565b600080604083850312156105fe57600080fd5b823567ffffffffffffffff81111561061557600080fd5b610621858286016103bb565b92505061063060208401610448565b90509250929050565b60006020828403121561064b57600080fd5b813567ffffffffffffffff81111561066257600080fd5b61066e848285016103bb565b949350505050565b60208152600061058060208301846104d1565b6000806040838503121561069c57600080fd5b6106a583610448565b9150602083013567ffffffffffffffff8111156106c157600080fd5b6105e1858286016103bb56fea26469706673582212201cdb6c5e4ecb05e1a6c1aaff8787175d2d54c94ae49d96cb05e1ff22820e80e264736f6c63430008130033",
+    "sourceMap": "83:2445:7:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c80636835f32c116100665780636835f32c1461022557806372915d89146102725780637476d1ac14610295578063800e65f214610304578063ac799cb31461036e57600080fd5b80631f785c95146100a35780633ed8572e146101005780635c4b7b60146101785780635de3b44c1461019057806364009b99146101d5575b600080fd5b6100ea6100b136600461045d565b60408051606080820183528082526000602083015291810191909152506040805160608101825293845291151560208401529082015290565b6040516100f79190610517565b60405180910390f35b6100ea61010e366004610565565b604080516060808201835280825260006020808401829052928401829052835160a08101855260189281019283527726a2a9a9a0a3a2afa9a2a622a1aa22a22fa12cafaaa9a2a960411b608082015291825293151581830152825191820183529281529082015290565b610180600081565b60405190151581526020016100f7565b6100ea61019e366004610587565b6040805160608082018352808252600060208301529181019190915250604080516060810182529283526000602084015282015290565b6100ea6101e33660046105eb565b60408051606080820183528082526000602080840182905292840182905283519182018452948152921515838201528151908101825292835281019190915290565b6100ea610233366004610639565b60408051606080820183528082526000602080840182905292840182905283519182018452938152808201849052825191820183529281529082015290565b6102886040518060200160405280600081525081565b6040516100f79190610676565b6100ea6102a3366004610689565b60408051606080820183528082526000602083015291810191909152506040805160a0810182526018606082019081527726a2a9a9a0a3a2afa9a2a622a1aa22a22fa12cafaaa9a2a960411b60808301528152921515602084015282015290565b604080516060808201835280825260006020808401829052928401829052835160a08101855260189281019283527726a2a9a9a0a3a2afa9a2a622a1aa22a22fa12cafaaa9a2a960411b6080820152918252818301819052835192830184528252918201526100ea565b6102886040518060400160405280601881526020017726a2a9a9a0a3a2afa9a2a622a1aa22a22fa12cafaaa9a2a960411b81525081565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126103cc57600080fd5b813567ffffffffffffffff808211156103e7576103e76103a5565b604051601f8301601f19908116603f0116810190828211818310171561040f5761040f6103a5565b8160405283815286602085880101111561042857600080fd5b836020870160208301376000602085830101528094505050505092915050565b8035801515811461045857600080fd5b919050565b60008060006060848603121561047257600080fd5b833567ffffffffffffffff8082111561048a57600080fd5b610496878388016103bb565b94506104a460208701610448565b935060408601359150808211156104ba57600080fd5b506104c7868287016103bb565b9150509250925092565b6000815180845260005b818110156104f7576020818501810151868301820152016104db565b506000602082860101526020601f19601f83011685010191505092915050565b60208152600082516060602084015261053360808401826104d1565b90506020840151151560408401526040840151601f1984830301606085015261055c82826104d1565b95945050505050565b60006020828403121561057757600080fd5b61058082610448565b9392505050565b6000806040838503121561059a57600080fd5b823567ffffffffffffffff808211156105b257600080fd5b6105be868387016103bb565b935060208501359150808211156105d457600080fd5b506105e1858286016103bb565b9150509250929050565b600080604083850312156105fe57600080fd5b823567ffffffffffffffff81111561061557600080fd5b610621858286016103bb565b92505061063060208401610448565b90509250929050565b60006020828403121561064b57600080fd5b813567ffffffffffffffff81111561066257600080fd5b61066e848285016103bb565b949350505050565b60208152600061058060208301846104d1565b6000806040838503121561069c57600080fd5b6106a583610448565b9150602083013567ffffffffffffffff8111156106c157600080fd5b6105e1858286016103bb56fea26469706673582212201cdb6c5e4ecb05e1a6c1aaff8787175d2d54c94ae49d96cb05e1ff22820e80e264736f6c63430008130033",
+    "sourceMap": "83:2445:7:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1305:304;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;1474:130:7;;;;;;;;;;;;;;;;;;;;;;;1305:304;;;;;;;;:::i;:::-;;;;;;;;1613:295;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;1720:183:7;;1756:33;;;;;;1720:183;;;1756:33;;;-1:-1:-1;;;1756:33:7;;;;1720:183;;;;;;;;;;1858:36;;;;;;;;;;-1:-1:-1;;;1720:183:7;;1613:295;243:76;;314:5;243:76;;;;;3051:14:15;;3044:22;3026:41;;3014:2;2999:18;243:76:7;2886:187:15;997:304:7;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;1137:159:7;;;;;;;;;;;-1:-1:-1;1137:159:7;;;;;;;;997:304;690:303;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;831:157:7;;;;;;;;;;;;;;;;;943:36;;;;;;;;;;831:157;;;;;;;690:303;391:295;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;495:186:7;;;;;;;;;;;;;;;;636:36;;;;;;;;;;495:186;;;;;391:295;323:63;;;;;;;;;;;;;;;;;;;;;;;:::i;1912:304::-;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;2055:156:7;;;2091:33;;;;;;2055:156;;;2091:33;;;-1:-1:-1;;;2091:33:7;;;;2055:156;;;;;2091:33;2055:156;;;;;;;1912:304;2220:306;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;2309:212:7;;2345:33;;;;;;2309:212;;;2345:33;;;-1:-1:-1;;;2345:33:7;;;;2309:212;;;;;;;;;2476:36;;;;;;;;;-1:-1:-1;;;2309:212:7;2220:306;;155:84;;;;;;;;;;;;;;;-1:-1:-1;;;155:84:7;;;;;14:127:15;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:718;188:5;241:3;234:4;226:6;222:17;218:27;208:55;;259:1;256;249:12;208:55;295:6;282:20;321:18;358:2;354;351:10;348:36;;;364:18;;:::i;:::-;439:2;433:9;407:2;493:13;;-1:-1:-1;;489:22:15;;;513:2;485:31;481:40;469:53;;;537:18;;;557:22;;;534:46;531:72;;;583:18;;:::i;:::-;623:10;619:2;612:22;658:2;650:6;643:18;704:3;697:4;692:2;684:6;680:15;676:26;673:35;670:55;;;721:1;718;711:12;670:55;785:2;778:4;770:6;766:17;759:4;751:6;747:17;734:54;832:1;825:4;820:2;812:6;808:15;804:26;797:37;852:6;843:15;;;;;;146:718;;;;:::o;869:160::-;934:20;;990:13;;983:21;973:32;;963:60;;1019:1;1016;1009:12;963:60;869:160;;;:::o;1034:607::-;1126:6;1134;1142;1195:2;1183:9;1174:7;1170:23;1166:32;1163:52;;;1211:1;1208;1201:12;1163:52;1251:9;1238:23;1280:18;1321:2;1313:6;1310:14;1307:34;;;1337:1;1334;1327:12;1307:34;1360:49;1401:7;1392:6;1381:9;1377:22;1360:49;:::i;:::-;1350:59;;1428:35;1459:2;1448:9;1444:18;1428:35;:::i;:::-;1418:45;;1516:2;1505:9;1501:18;1488:32;1472:48;;1545:2;1535:8;1532:16;1529:36;;;1561:1;1558;1551:12;1529:36;;1584:51;1627:7;1616:8;1605:9;1601:24;1584:51;:::i;:::-;1574:61;;;1034:607;;;;;:::o;1646:422::-;1687:3;1725:5;1719:12;1752:6;1747:3;1740:19;1777:1;1787:162;1801:6;1798:1;1795:13;1787:162;;;1863:4;1919:13;;;1915:22;;1909:29;1891:11;;;1887:20;;1880:59;1816:12;1787:162;;;1791:3;1994:1;1987:4;1978:6;1973:3;1969:16;1965:27;1958:38;2057:4;2050:2;2046:7;2041:2;2033:6;2029:15;2025:29;2020:3;2016:39;2012:50;2005:57;;;1646:422;;;;:::o;2073:623::-;2270:2;2259:9;2252:21;2233:4;2308:6;2302:13;2351:4;2346:2;2335:9;2331:18;2324:32;2379:51;2425:3;2414:9;2410:19;2396:12;2379:51;:::i;:::-;2365:65;;2498:2;2490:6;2486:15;2480:22;2473:30;2466:38;2461:2;2450:9;2446:18;2439:66;2554:2;2546:6;2542:15;2536:22;2628:2;2624:7;2612:9;2604:6;2600:22;2596:36;2589:4;2578:9;2574:20;2567:66;2650:40;2683:6;2667:14;2650:40;:::i;:::-;2642:48;2073:623;-1:-1:-1;;;;;2073:623:15:o;2701:180::-;2757:6;2810:2;2798:9;2789:7;2785:23;2781:32;2778:52;;;2826:1;2823;2816:12;2778:52;2849:26;2865:9;2849:26;:::i;:::-;2839:36;2701:180;-1:-1:-1;;;2701:180:15:o;3078:539::-;3164:6;3172;3225:2;3213:9;3204:7;3200:23;3196:32;3193:52;;;3241:1;3238;3231:12;3193:52;3281:9;3268:23;3310:18;3351:2;3343:6;3340:14;3337:34;;;3367:1;3364;3357:12;3337:34;3390:49;3431:7;3422:6;3411:9;3407:22;3390:49;:::i;:::-;3380:59;;3492:2;3481:9;3477:18;3464:32;3448:48;;3521:2;3511:8;3508:16;3505:36;;;3537:1;3534;3527:12;3505:36;;3560:51;3603:7;3592:8;3581:9;3577:24;3560:51;:::i;:::-;3550:61;;;3078:539;;;;;:::o;3622:388::-;3696:6;3704;3757:2;3745:9;3736:7;3732:23;3728:32;3725:52;;;3773:1;3770;3763:12;3725:52;3813:9;3800:23;3846:18;3838:6;3835:30;3832:50;;;3878:1;3875;3868:12;3832:50;3901:49;3942:7;3933:6;3922:9;3918:22;3901:49;:::i;:::-;3891:59;;;3969:35;4000:2;3989:9;3985:18;3969:35;:::i;:::-;3959:45;;3622:388;;;;;:::o;4015:320::-;4083:6;4136:2;4124:9;4115:7;4111:23;4107:32;4104:52;;;4152:1;4149;4142:12;4104:52;4192:9;4179:23;4225:18;4217:6;4214:30;4211:50;;;4257:1;4254;4247:12;4211:50;4280:49;4321:7;4312:6;4301:9;4297:22;4280:49;:::i;:::-;4270:59;4015:320;-1:-1:-1;;;;4015:320:15:o;4340:217::-;4487:2;4476:9;4469:21;4450:4;4507:44;4547:2;4536:9;4532:18;4524:6;4507:44;:::i;4562:388::-;4636:6;4644;4697:2;4685:9;4676:7;4672:23;4668:32;4665:52;;;4713:1;4710;4703:12;4665:52;4736:26;4752:9;4736:26;:::i;:::-;4726:36;;4813:2;4802:9;4798:18;4785:32;4840:18;4832:6;4829:30;4826:50;;;4872:1;4869;4862:12;4826:50;4895:49;4936:7;4927:6;4916:9;4912:22;4895:49;:::i",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "DEFAULT_SIGNATURE_REQUEST_EXTRA_DATA()": "72915d89",
+    "DEFAULT_SIGNATURE_REQUEST_IS_SELECTABLE_BY_USER()": "5c4b7b60",
+    "DEFAULT_SIGNATURE_REQUEST_MESSAGE()": "ac799cb3",
+    "build(bool)": "3ed8572e",
+    "build(bool,bytes)": "7476d1ac",
+    "build(bytes)": "6835f32c",
+    "build(bytes,bool)": "64009b99",
+    "build(bytes,bool,bytes)": "1f785c95",
+    "build(bytes,bytes)": "5de3b44c",
+    "buildEmpty()": "800e65f2"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"DEFAULT_SIGNATURE_REQUEST_EXTRA_DATA\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEFAULT_SIGNATURE_REQUEST_IS_SELECTABLE_BY_USER\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEFAULT_SIGNATURE_REQUEST_MESSAGE\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"name\":\"build\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"internalType\":\"struct SignatureRequest\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"}],\"name\":\"build\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"internalType\":\"struct SignatureRequest\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"name\":\"build\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"internalType\":\"struct SignatureRequest\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"}],\"name\":\"build\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"internalType\":\"struct SignatureRequest\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"}],\"name\":\"build\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"internalType\":\"struct SignatureRequest\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"name\":\"build\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"internalType\":\"struct SignatureRequest\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"buildEmpty\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isSelectableByUser\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"extraData\",\"type\":\"bytes\"}],\"internalType\":\"struct SignatureRequest\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/sismo-connect-solidity/src/utils/SignatureBuilder.sol\":\"SignatureBuilder\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ccip-cross-chain-name-service/=lib/ccip-cross-chain-name-service/contracts/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":hyperlane-quickstart/=lib/hyperlane-quickstart/contracts/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":sismo-connect-solidity/=lib/sismo-connect-solidity/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/sismo-connect-solidity/src/utils/SignatureBuilder.sol\":{\"keccak256\":\"0x5d071367c63510c3e38d4fe73b81ec2b7eda1c442fe3e8c75fcbab0d929524dc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4e6ca7efdab0b903c060b743cf88c1f33db62e23a53786be56f91eddc6ccaeac\",\"dweb:/ipfs/QmSRmRKouzYAqeEArZDrquG5i1hJHnNE18qegMhKaQYVEk\"]},\"lib/sismo-connect-solidity/src/utils/Structs.sol\":{\"keccak256\":\"0x978c56d685ed88ce85590f7f7acec107e34f5ef6b4cf9f4dcfc2be5b5d3e97d8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6373516cad9fa0e4fbc344b3ce7155a4eca356403f748209cd13d86f8b24dee4\",\"dweb:/ipfs/QmRDHCyetFYKL36GdM3hibo4hFHEWEZ9xPKrrvw9fBnLQn\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DEFAULT_SIGNATURE_REQUEST_EXTRA_DATA",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DEFAULT_SIGNATURE_REQUEST_IS_SELECTABLE_BY_USER",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DEFAULT_SIGNATURE_REQUEST_MESSAGE",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "build",
+          "outputs": [
+            {
+              "internalType": "struct SignatureRequest",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "message",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isSelectableByUser",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "extraData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "build",
+          "outputs": [
+            {
+              "internalType": "struct SignatureRequest",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "message",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isSelectableByUser",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "extraData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "build",
+          "outputs": [
+            {
+              "internalType": "struct SignatureRequest",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "message",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isSelectableByUser",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "extraData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "build",
+          "outputs": [
+            {
+              "internalType": "struct SignatureRequest",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "message",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isSelectableByUser",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "extraData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "build",
+          "outputs": [
+            {
+              "internalType": "struct SignatureRequest",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "message",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isSelectableByUser",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "extraData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bool",
+              "name": "isSelectableByUser",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "build",
+          "outputs": [
+            {
+              "internalType": "struct SignatureRequest",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "message",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isSelectableByUser",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "extraData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "buildEmpty",
+          "outputs": [
+            {
+              "internalType": "struct SignatureRequest",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "message",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isSelectableByUser",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "extraData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "ccip-cross-chain-name-service/=lib/ccip-cross-chain-name-service/contracts/",
+        "ds-test/=lib/solmate/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "hyperlane-quickstart/=lib/hyperlane-quickstart/contracts/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        "sismo-connect-solidity/=lib/sismo-connect-solidity/src/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/sismo-connect-solidity/src/utils/SignatureBuilder.sol": "SignatureBuilder"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/sismo-connect-solidity/src/utils/SignatureBuilder.sol": {
+        "keccak256": "0x5d071367c63510c3e38d4fe73b81ec2b7eda1c442fe3e8c75fcbab0d929524dc",
+        "urls": [
+          "bzz-raw://4e6ca7efdab0b903c060b743cf88c1f33db62e23a53786be56f91eddc6ccaeac",
+          "dweb:/ipfs/QmSRmRKouzYAqeEArZDrquG5i1hJHnNE18qegMhKaQYVEk"
+        ],
+        "license": "MIT"
+      },
+      "lib/sismo-connect-solidity/src/utils/Structs.sol": {
+        "keccak256": "0x978c56d685ed88ce85590f7f7acec107e34f5ef6b4cf9f4dcfc2be5b5d3e97d8",
+        "urls": [
+          "bzz-raw://6373516cad9fa0e4fbc344b3ce7155a4eca356403f748209cd13d86f8b24dee4",
+          "dweb:/ipfs/QmRDHCyetFYKL36GdM3hibo4hFHEWEZ9xPKrrvw9fBnLQn"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/sismo-connect-solidity/src/utils/SignatureBuilder.sol",
+    "id": 5149,
+    "exportedSymbols": {
+      "Auth": [
+        5362
+      ],
+      "AuthRequest": [
+        5314
+      ],
+      "AuthType": [
+        5344
+      ],
+      "Claim": [
+        5376
+      ],
+      "ClaimRequest": [
+        5330
+      ],
+      "ClaimType": [
+        5350
+      ],
+      "Signature": [
+        5381
+      ],
+      "SignatureBuilder": [
+        5148
+      ],
+      "SignatureRequest": [
+        5337
+      ],
+      "SismoConnectConfig": [
+        5297
+      ],
+      "SismoConnectProof": [
+        5409
+      ],
+      "SismoConnectRequest": [
+        5291
+      ],
+      "SismoConnectResponse": [
+        5394
+      ],
+      "SismoConnectVerifiedResult": [
+        5426
+      ],
+      "VaultConfig": [
+        5300
+      ],
+      "VerifiedAuth": [
+        5438
+      ],
+      "VerifiedClaim": [
+        5454
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2497:7",
+    "nodes": [
+      {
+        "id": 5024,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:7",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 5025,
+        "nodeType": "ImportDirective",
+        "src": "58:23:7",
+        "nodes": [],
+        "absolutePath": "lib/sismo-connect-solidity/src/utils/Structs.sol",
+        "file": "./Structs.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 5149,
+        "sourceUnit": 5455,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 5148,
+        "nodeType": "ContractDefinition",
+        "src": "83:2445:7",
+        "nodes": [
+          {
+            "id": 5028,
+            "nodeType": "VariableDeclaration",
+            "src": "155:84:7",
+            "nodes": [],
+            "constant": true,
+            "functionSelector": "ac799cb3",
+            "mutability": "constant",
+            "name": "DEFAULT_SIGNATURE_REQUEST_MESSAGE",
+            "nameLocation": "177:33:7",
+            "scope": 5148,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes_memory_ptr",
+              "typeString": "bytes"
+            },
+            "typeName": {
+              "id": 5026,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "155:5:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            },
+            "value": {
+              "hexValue": "4d4553534147455f53454c45435445445f42595f55534552",
+              "id": 5027,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "213:26:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_b38c2ef5e90cbefbb06bbc591b2fc4191bee76c35e67149604a3e12a24eaa7a3",
+                "typeString": "literal_string \"MESSAGE_SELECTED_BY_USER\""
+              },
+              "value": "MESSAGE_SELECTED_BY_USER"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 5031,
+            "nodeType": "VariableDeclaration",
+            "src": "243:76:7",
+            "nodes": [],
+            "constant": true,
+            "functionSelector": "5c4b7b60",
+            "mutability": "constant",
+            "name": "DEFAULT_SIGNATURE_REQUEST_IS_SELECTABLE_BY_USER",
+            "nameLocation": "264:47:7",
+            "scope": 5148,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 5029,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "243:4:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "hexValue": "66616c7365",
+              "id": 5030,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "314:5:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "false"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 5034,
+            "nodeType": "VariableDeclaration",
+            "src": "323:63:7",
+            "nodes": [],
+            "constant": true,
+            "functionSelector": "72915d89",
+            "mutability": "constant",
+            "name": "DEFAULT_SIGNATURE_REQUEST_EXTRA_DATA",
+            "nameLocation": "345:36:7",
+            "scope": 5148,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes_memory_ptr",
+              "typeString": "bytes"
+            },
+            "typeName": {
+              "id": 5032,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "323:5:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            },
+            "value": {
+              "hexValue": "",
+              "id": 5033,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "384:2:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                "typeString": "literal_string \"\""
+              },
+              "value": ""
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 5049,
+            "nodeType": "FunctionDefinition",
+            "src": "391:295:7",
+            "nodes": [],
+            "body": {
+              "id": 5048,
+              "nodeType": "Block",
+              "src": "476:210:7",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5043,
+                        "name": "message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5036,
+                        "src": "531:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "id": 5044,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_IS_SELECTABLE_BY_USER",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5031,
+                        "src": "568:47:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "id": 5045,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_EXTRA_DATA",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5034,
+                        "src": "636:36:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 5042,
+                      "name": "SignatureRequest",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5337,
+                      "src": "495:16:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_SignatureRequest_$5337_storage_ptr_$",
+                        "typeString": "type(struct SignatureRequest storage pointer)"
+                      }
+                    },
+                    "id": 5046,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "522:7:7",
+                      "548:18:7",
+                      "625:9:7"
+                    ],
+                    "names": [
+                      "message",
+                      "isSelectableByUser",
+                      "extraData"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "495:186:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                      "typeString": "struct SignatureRequest memory"
+                    }
+                  },
+                  "functionReturnParameters": 5041,
+                  "id": 5047,
+                  "nodeType": "Return",
+                  "src": "482:199:7"
+                }
+              ]
+            },
+            "functionSelector": "6835f32c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "build",
+            "nameLocation": "400:5:7",
+            "parameters": {
+              "id": 5037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5036,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "419:7:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5049,
+                  "src": "406:20:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5035,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "406:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "405:22:7"
+            },
+            "returnParameters": {
+              "id": 5041,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5040,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5049,
+                  "src": "451:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                    "typeString": "struct SignatureRequest"
+                  },
+                  "typeName": {
+                    "id": 5039,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5038,
+                      "name": "SignatureRequest",
+                      "nameLocations": [
+                        "451:16:7"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5337,
+                      "src": "451:16:7"
+                    },
+                    "referencedDeclaration": 5337,
+                    "src": "451:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_storage_ptr",
+                      "typeString": "struct SignatureRequest"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "450:25:7"
+            },
+            "scope": 5148,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5066,
+            "nodeType": "FunctionDefinition",
+            "src": "690:303:7",
+            "nodes": [],
+            "body": {
+              "id": 5065,
+              "nodeType": "Block",
+              "src": "812:181:7",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5060,
+                        "name": "message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5051,
+                        "src": "867:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "id": 5061,
+                        "name": "isSelectableByUser",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5053,
+                        "src": "904:18:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "id": 5062,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_EXTRA_DATA",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5034,
+                        "src": "943:36:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 5059,
+                      "name": "SignatureRequest",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5337,
+                      "src": "831:16:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_SignatureRequest_$5337_storage_ptr_$",
+                        "typeString": "type(struct SignatureRequest storage pointer)"
+                      }
+                    },
+                    "id": 5063,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "858:7:7",
+                      "884:18:7",
+                      "932:9:7"
+                    ],
+                    "names": [
+                      "message",
+                      "isSelectableByUser",
+                      "extraData"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "831:157:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                      "typeString": "struct SignatureRequest memory"
+                    }
+                  },
+                  "functionReturnParameters": 5058,
+                  "id": 5064,
+                  "nodeType": "Return",
+                  "src": "818:170:7"
+                }
+              ]
+            },
+            "functionSelector": "64009b99",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "build",
+            "nameLocation": "699:5:7",
+            "parameters": {
+              "id": 5054,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5051,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "723:7:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5066,
+                  "src": "710:20:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5050,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "710:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5053,
+                  "mutability": "mutable",
+                  "name": "isSelectableByUser",
+                  "nameLocation": "741:18:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5066,
+                  "src": "736:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5052,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "736:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "704:59:7"
+            },
+            "returnParameters": {
+              "id": 5058,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5057,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5066,
+                  "src": "787:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                    "typeString": "struct SignatureRequest"
+                  },
+                  "typeName": {
+                    "id": 5056,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5055,
+                      "name": "SignatureRequest",
+                      "nameLocations": [
+                        "787:16:7"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5337,
+                      "src": "787:16:7"
+                    },
+                    "referencedDeclaration": 5337,
+                    "src": "787:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_storage_ptr",
+                      "typeString": "struct SignatureRequest"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "786:25:7"
+            },
+            "scope": 5148,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5083,
+            "nodeType": "FunctionDefinition",
+            "src": "997:304:7",
+            "nodes": [],
+            "body": {
+              "id": 5082,
+              "nodeType": "Block",
+              "src": "1118:183:7",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5077,
+                        "name": "message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5068,
+                        "src": "1173:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "id": 5078,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_IS_SELECTABLE_BY_USER",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5031,
+                        "src": "1210:47:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "id": 5079,
+                        "name": "extraData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5070,
+                        "src": "1278:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 5076,
+                      "name": "SignatureRequest",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5337,
+                      "src": "1137:16:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_SignatureRequest_$5337_storage_ptr_$",
+                        "typeString": "type(struct SignatureRequest storage pointer)"
+                      }
+                    },
+                    "id": 5080,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "1164:7:7",
+                      "1190:18:7",
+                      "1267:9:7"
+                    ],
+                    "names": [
+                      "message",
+                      "isSelectableByUser",
+                      "extraData"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "1137:159:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                      "typeString": "struct SignatureRequest memory"
+                    }
+                  },
+                  "functionReturnParameters": 5075,
+                  "id": 5081,
+                  "nodeType": "Return",
+                  "src": "1124:172:7"
+                }
+              ]
+            },
+            "functionSelector": "5de3b44c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "build",
+            "nameLocation": "1006:5:7",
+            "parameters": {
+              "id": 5071,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5068,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "1030:7:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5083,
+                  "src": "1017:20:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5067,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1017:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5070,
+                  "mutability": "mutable",
+                  "name": "extraData",
+                  "nameLocation": "1056:9:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5083,
+                  "src": "1043:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5069,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1043:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1011:58:7"
+            },
+            "returnParameters": {
+              "id": 5075,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5074,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5083,
+                  "src": "1093:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                    "typeString": "struct SignatureRequest"
+                  },
+                  "typeName": {
+                    "id": 5073,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5072,
+                      "name": "SignatureRequest",
+                      "nameLocations": [
+                        "1093:16:7"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5337,
+                      "src": "1093:16:7"
+                    },
+                    "referencedDeclaration": 5337,
+                    "src": "1093:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_storage_ptr",
+                      "typeString": "struct SignatureRequest"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1092:25:7"
+            },
+            "scope": 5148,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5102,
+            "nodeType": "FunctionDefinition",
+            "src": "1305:304:7",
+            "nodes": [],
+            "body": {
+              "id": 5101,
+              "nodeType": "Block",
+              "src": "1455:154:7",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5096,
+                        "name": "message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5085,
+                        "src": "1510:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "id": 5097,
+                        "name": "isSelectableByUser",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5087,
+                        "src": "1547:18:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "id": 5098,
+                        "name": "extraData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5089,
+                        "src": "1586:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 5095,
+                      "name": "SignatureRequest",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5337,
+                      "src": "1474:16:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_SignatureRequest_$5337_storage_ptr_$",
+                        "typeString": "type(struct SignatureRequest storage pointer)"
+                      }
+                    },
+                    "id": 5099,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "1501:7:7",
+                      "1527:18:7",
+                      "1575:9:7"
+                    ],
+                    "names": [
+                      "message",
+                      "isSelectableByUser",
+                      "extraData"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "1474:130:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                      "typeString": "struct SignatureRequest memory"
+                    }
+                  },
+                  "functionReturnParameters": 5094,
+                  "id": 5100,
+                  "nodeType": "Return",
+                  "src": "1461:143:7"
+                }
+              ]
+            },
+            "functionSelector": "1f785c95",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "build",
+            "nameLocation": "1314:5:7",
+            "parameters": {
+              "id": 5090,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5085,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "1338:7:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5102,
+                  "src": "1325:20:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5084,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1325:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5087,
+                  "mutability": "mutable",
+                  "name": "isSelectableByUser",
+                  "nameLocation": "1356:18:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5102,
+                  "src": "1351:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5086,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1351:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5089,
+                  "mutability": "mutable",
+                  "name": "extraData",
+                  "nameLocation": "1393:9:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5102,
+                  "src": "1380:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5088,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1380:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1319:87:7"
+            },
+            "returnParameters": {
+              "id": 5094,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5093,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5102,
+                  "src": "1430:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                    "typeString": "struct SignatureRequest"
+                  },
+                  "typeName": {
+                    "id": 5092,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5091,
+                      "name": "SignatureRequest",
+                      "nameLocations": [
+                        "1430:16:7"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5337,
+                      "src": "1430:16:7"
+                    },
+                    "referencedDeclaration": 5337,
+                    "src": "1430:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_storage_ptr",
+                      "typeString": "struct SignatureRequest"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1429:25:7"
+            },
+            "scope": 5148,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5117,
+            "nodeType": "FunctionDefinition",
+            "src": "1613:295:7",
+            "nodes": [],
+            "body": {
+              "id": 5116,
+              "nodeType": "Block",
+              "src": "1701:207:7",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5111,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_MESSAGE",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5028,
+                        "src": "1756:33:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "id": 5112,
+                        "name": "isSelectableByUser",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5104,
+                        "src": "1819:18:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "id": 5113,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_EXTRA_DATA",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5034,
+                        "src": "1858:36:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 5110,
+                      "name": "SignatureRequest",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5337,
+                      "src": "1720:16:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_SignatureRequest_$5337_storage_ptr_$",
+                        "typeString": "type(struct SignatureRequest storage pointer)"
+                      }
+                    },
+                    "id": 5114,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "1747:7:7",
+                      "1799:18:7",
+                      "1847:9:7"
+                    ],
+                    "names": [
+                      "message",
+                      "isSelectableByUser",
+                      "extraData"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "1720:183:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                      "typeString": "struct SignatureRequest memory"
+                    }
+                  },
+                  "functionReturnParameters": 5109,
+                  "id": 5115,
+                  "nodeType": "Return",
+                  "src": "1707:196:7"
+                }
+              ]
+            },
+            "functionSelector": "3ed8572e",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "build",
+            "nameLocation": "1622:5:7",
+            "parameters": {
+              "id": 5105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5104,
+                  "mutability": "mutable",
+                  "name": "isSelectableByUser",
+                  "nameLocation": "1633:18:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5117,
+                  "src": "1628:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5103,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1628:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1627:25:7"
+            },
+            "returnParameters": {
+              "id": 5109,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5108,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5117,
+                  "src": "1676:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                    "typeString": "struct SignatureRequest"
+                  },
+                  "typeName": {
+                    "id": 5107,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5106,
+                      "name": "SignatureRequest",
+                      "nameLocations": [
+                        "1676:16:7"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5337,
+                      "src": "1676:16:7"
+                    },
+                    "referencedDeclaration": 5337,
+                    "src": "1676:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_storage_ptr",
+                      "typeString": "struct SignatureRequest"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1675:25:7"
+            },
+            "scope": 5148,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5134,
+            "nodeType": "FunctionDefinition",
+            "src": "1912:304:7",
+            "nodes": [],
+            "body": {
+              "id": 5133,
+              "nodeType": "Block",
+              "src": "2036:180:7",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5128,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_MESSAGE",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5028,
+                        "src": "2091:33:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "id": 5129,
+                        "name": "isSelectableByUser",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5119,
+                        "src": "2154:18:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "id": 5130,
+                        "name": "extraData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5121,
+                        "src": "2193:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 5127,
+                      "name": "SignatureRequest",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5337,
+                      "src": "2055:16:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_SignatureRequest_$5337_storage_ptr_$",
+                        "typeString": "type(struct SignatureRequest storage pointer)"
+                      }
+                    },
+                    "id": 5131,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "2082:7:7",
+                      "2134:18:7",
+                      "2182:9:7"
+                    ],
+                    "names": [
+                      "message",
+                      "isSelectableByUser",
+                      "extraData"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "2055:156:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                      "typeString": "struct SignatureRequest memory"
+                    }
+                  },
+                  "functionReturnParameters": 5126,
+                  "id": 5132,
+                  "nodeType": "Return",
+                  "src": "2042:169:7"
+                }
+              ]
+            },
+            "functionSelector": "7476d1ac",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "build",
+            "nameLocation": "1921:5:7",
+            "parameters": {
+              "id": 5122,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5119,
+                  "mutability": "mutable",
+                  "name": "isSelectableByUser",
+                  "nameLocation": "1937:18:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5134,
+                  "src": "1932:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5118,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1932:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5121,
+                  "mutability": "mutable",
+                  "name": "extraData",
+                  "nameLocation": "1974:9:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5134,
+                  "src": "1961:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5120,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1961:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1926:61:7"
+            },
+            "returnParameters": {
+              "id": 5126,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5125,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5134,
+                  "src": "2011:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                    "typeString": "struct SignatureRequest"
+                  },
+                  "typeName": {
+                    "id": 5124,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5123,
+                      "name": "SignatureRequest",
+                      "nameLocations": [
+                        "2011:16:7"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5337,
+                      "src": "2011:16:7"
+                    },
+                    "referencedDeclaration": 5337,
+                    "src": "2011:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_storage_ptr",
+                      "typeString": "struct SignatureRequest"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2010:25:7"
+            },
+            "scope": 5148,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5147,
+            "nodeType": "FunctionDefinition",
+            "src": "2220:306:7",
+            "nodes": [],
+            "body": {
+              "id": 5146,
+              "nodeType": "Block",
+              "src": "2290:236:7",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5141,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_MESSAGE",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5028,
+                        "src": "2345:33:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "id": 5142,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_IS_SELECTABLE_BY_USER",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5031,
+                        "src": "2408:47:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "id": 5143,
+                        "name": "DEFAULT_SIGNATURE_REQUEST_EXTRA_DATA",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5034,
+                        "src": "2476:36:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 5140,
+                      "name": "SignatureRequest",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5337,
+                      "src": "2309:16:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_SignatureRequest_$5337_storage_ptr_$",
+                        "typeString": "type(struct SignatureRequest storage pointer)"
+                      }
+                    },
+                    "id": 5144,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "2336:7:7",
+                      "2388:18:7",
+                      "2465:9:7"
+                    ],
+                    "names": [
+                      "message",
+                      "isSelectableByUser",
+                      "extraData"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "2309:212:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                      "typeString": "struct SignatureRequest memory"
+                    }
+                  },
+                  "functionReturnParameters": 5139,
+                  "id": 5145,
+                  "nodeType": "Return",
+                  "src": "2296:225:7"
+                }
+              ]
+            },
+            "functionSelector": "800e65f2",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buildEmpty",
+            "nameLocation": "2229:10:7",
+            "parameters": {
+              "id": 5135,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2239:2:7"
+            },
+            "returnParameters": {
+              "id": 5139,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5138,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5147,
+                  "src": "2265:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SignatureRequest_$5337_memory_ptr",
+                    "typeString": "struct SignatureRequest"
+                  },
+                  "typeName": {
+                    "id": 5137,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5136,
+                      "name": "SignatureRequest",
+                      "nameLocations": [
+                        "2265:16:7"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5337,
+                      "src": "2265:16:7"
+                    },
+                    "referencedDeclaration": 5337,
+                    "src": "2265:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SignatureRequest_$5337_storage_ptr",
+                      "typeString": "struct SignatureRequest"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2264:25:7"
+            },
+            "scope": 5148,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "SignatureBuilder",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          5148
+        ],
+        "name": "SignatureBuilder",
+        "nameLocation": "92:16:7",
+        "scope": 5149,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 7
+}

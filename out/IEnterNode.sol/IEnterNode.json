@@ -1,0 +1,212 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "deposit",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "deposit()": "d0e30db0"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"deposit()\":{\"notice\":\"Method to deposit\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/IEnterNode.sol\":\"IEnterNode\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ccip-cross-chain-name-service/=lib/ccip-cross-chain-name-service/contracts/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":hyperlane-quickstart/=lib/hyperlane-quickstart/contracts/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":sismo-connect-solidity/=lib/sismo-connect-solidity/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/IEnterNode.sol\":{\"keccak256\":\"0x389681ccbed4d3eb9f716b3d9361620087e557ed24b2506375fe85a689a26c07\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://d02a9e004931faab4462e73eb7f965887340758c73f1e1f669a82bda60cc6cd6\",\"dweb:/ipfs/QmbgfCJb44rS1NkFTWDYXS6tP5L8ba6DS6nbof7MgDAVcx\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "deposit",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "deposit()": {
+            "notice": "Method to deposit"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "ccip-cross-chain-name-service/=lib/ccip-cross-chain-name-service/contracts/",
+        "ds-test/=lib/solmate/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "hyperlane-quickstart/=lib/hyperlane-quickstart/contracts/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        "sismo-connect-solidity/=lib/sismo-connect-solidity/src/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/IEnterNode.sol": "IEnterNode"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/IEnterNode.sol": {
+        "keccak256": "0x389681ccbed4d3eb9f716b3d9361620087e557ed24b2506375fe85a689a26c07",
+        "urls": [
+          "bzz-raw://d02a9e004931faab4462e73eb7f965887340758c73f1e1f669a82bda60cc6cd6",
+          "dweb:/ipfs/QmbgfCJb44rS1NkFTWDYXS6tP5L8ba6DS6nbof7MgDAVcx"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/IEnterNode.sol",
+    "id": 42572,
+    "exportedSymbols": {
+      "IEnterNode": [
+        42571
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:153:23",
+    "nodes": [
+      {
+        "id": 42564,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:23",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 42571,
+        "nodeType": "ContractDefinition",
+        "src": "65:126:23",
+        "nodes": [
+          {
+            "id": 42570,
+            "nodeType": "FunctionDefinition",
+            "src": "132:51:23",
+            "nodes": [],
+            "documentation": {
+              "id": 42565,
+              "nodeType": "StructuredDocumentation",
+              "src": "93:33:23",
+              "text": "Method to deposit"
+            },
+            "functionSelector": "d0e30db0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "141:7:23",
+            "parameters": {
+              "id": 42566,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "148:2:23"
+            },
+            "returnParameters": {
+              "id": 42569,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42568,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42570,
+                  "src": "177:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 42567,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "177:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "176:6:23"
+            },
+            "scope": 42571,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEnterNode",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          42571
+        ],
+        "name": "IEnterNode",
+        "nameLocation": "75:10:23",
+        "scope": 42572,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 23
+}
