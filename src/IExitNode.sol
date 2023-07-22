@@ -13,6 +13,6 @@ interface IExitNode {
      */
 
     function withdraw(uint256 withdrawGasFee, uint256 vaultId) external;
-    
+
     function registerRedeem(uint256 vaultId, uint32 _otherChainId, uint256 gasFee) external;
 }

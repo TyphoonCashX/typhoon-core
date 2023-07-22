@@ -9,9 +9,7 @@ import "solmate/auth/Owned.sol";
 import "./HyperBridgeModule.sol";
 import "./IBridgeModule.sol";
 
-
 contract ExitNode is IExitNode, SismoConnect, Owned {
-
     using SismoConnectHelper for SismoConnectVerifiedResult;
 
     bool private _isImpersonationMode = true;
@@ -38,7 +36,6 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
         uint256 gasFee;
     }
 
-
     // empty struct encoding
     bytes32 public constant nullRedeemInformation = keccak256(
         abi.encode(PendingRedeem({vaultId: 0x0, outputAddress: address(0x0), releaseTimestamp: 0, gasFee: 0}))
@@ -52,28 +49,21 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     error zeroAddress();
     error isNotHyperplaneCaller(address callee);
 
-
     // mapping that associates vaultId to pending redeem information
     mapping(uint256 => PendingRedeem) public vaultIdToRedeemInformation;
 
+    // constructor
 
-
-     // constructor 
-
-    constructor(address _tokenAddress, bytes16 _appId) 
-    SismoConnect(buildConfig(_appId, _isImpersonationMode))
-    Owned(msg.sender) {
+    constructor(address _tokenAddress, bytes16 _appId)
+        SismoConnect(buildConfig(_appId, _isImpersonationMode))
+        Owned(msg.sender)
+    {
         tokenAddress = _tokenAddress;
     }
-    
-    function _deployHyperBridgeModule(
-        uint32 _chainId,
-        address _inbox,
-        address _outbox
-    ) private onlyOwner {
+
+    function _deployHyperBridgeModule(uint32 _chainId, address _inbox, address _outbox) private onlyOwner {
         bridgeModuleAddress = address(new HyperBridgeModule(address(this), _chainId, _inbox, _outbox, msg.sender));
     }
-
 
     /**
      *  @notice Function called to enter the pending registry, awaiting withdrawal
@@ -128,7 +118,7 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
         //TODO: have a signature for the withdrawn gasfee
         // verify if the vault Id is in the pending registry
         PendingRedeem storage pendingRedeem = vaultIdToRedeemInformation[vaultId];
-        uint256 gas = pendingRedeem.gasFee + withdrawGasFee;//TODO: gasFee < maxWithdraw
+        uint256 gas = pendingRedeem.gasFee + withdrawGasFee; //TODO: gasFee < maxWithdraw
         IERC20 bridgedToken = IERC20(tokenAddress);
 
         if (keccak256(abi.encode(pendingRedeem)) == nullRedeemInformation) {
@@ -145,7 +135,7 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     }
 
     /**
-     * @notice broadcast to other chains that claim has already been made 
+     * @notice broadcast to other chains that claim has already been made
      * @param vaultId : vaultId to the user.
      */
     function registerRedeem(uint256 vaultId, uint32 _otherChainId, uint256 gasFee) external {
@@ -155,14 +145,11 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
         if (!isRedeemed[vaultId]) {
             isRedeemed[vaultId] = true;
             return;
-        }
-        else{
-            if (IBridgeModule(bridgeAddress).thisChainId() < _otherChainId){
+        } else {
+            if (IBridgeModule(bridgeAddress).thisChainId() < _otherChainId) {
                 vaultIdToRedeemInformation[vaultId].gasFee += gasFee;
                 return;
-            }
-            else
-            {
+            } else {
                 delete vaultIdToRedeemInformation[vaultId];
                 return;
             }
