@@ -10,6 +10,7 @@ import "./HyperBridgeModule.sol";
 import "./IBridgeModule.sol";
 
 contract ExitNode is IExitNode, SismoConnect, Owned {
+
     using SismoConnectHelper for SismoConnectVerifiedResult;
 
     bool private _isImpersonationMode = true;
@@ -48,6 +49,7 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     error zeroVaultId();
     error zeroAddress();
     error isNotHyperplaneCaller(address callee);
+    error GasFeeHigherThanWithdraw();
 
     // mapping that associates vaultId to pending redeem information
     mapping(uint256 => PendingRedeem) public vaultIdToRedeemInformation;
@@ -67,14 +69,19 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     }
 
     /**
-     *  @notice Function called to enter the pending registry, awaiting withdrawal
-     *  @param response : generated proof deposited for verification
-     *  @param redeemGasFee : gas fee for redeeming, delegated to the relayer
-     *  @param outputAddress : output address for the bridge, where the tokens will be deposited
+    @dev interface 
      */
 
+
+
     //TODO: make this payable to get the money for the bridging
-    function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external {
+    function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external payable {
+        // make sur that gas fees are not higher than the maximal deposit amount.
+
+        if (redeemGasFee > DEPOSIT_AMOUNT) {
+            revert GasFeeHigherThanWithdraw();
+        }
+
         if (outputAddress == ZERO_ADDRESS) {
             revert zeroAddress();
         }
@@ -91,35 +98,48 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
             revert zeroVaultId();
         }
 
-        // This is the moment where we might take you money.
-
         if (isRedeemed[vaultId]) {
             revert isAlreadyClaimed(vaultId);
         }
 
         isRedeemed[vaultId] = true;
 
-        vaultIdToRedeemInformation[vaultId] = PendingRedeem({
+        PendingRedeem memory pendingRedeem = PendingRedeem({
             vaultId: vaultId,
             outputAddress: outputAddress,
             releaseTimestamp: block.timestamp + N_BLOCKS_DELAY,
-            gasFee: redeemGasFee //TODO: redeemGasFee < Max_Withdraw
+            gasFee: redeemGasFee
         });
 
-        //TODO: broadcast
+        vaultIdToRedeemInformation[vaultId] = pendingRedeem;
+
+        // create the bridge module and broadcast the register.
+
+        IBridgeModule bridgeModule = IBridgeModule(bridgeModuleAddress);
+        bridgeModule.broadcastRegister(vaultId);
     }
 
     /**
-     * @notice withdraw funds from the bridge
-     * @param withdrawGasFee : withdrawal gas fees delegated to the relayer.
-     * @param vaultId : vaultId of the user
+    @dev interface 
      */
 
-    function withdraw(uint256 withdrawGasFee, uint256 vaultId) external {
-        //TODO: have a signature for the withdrawn gasfee
-        // verify if the vault Id is in the pending registry
+    function withdraw(uint256 withdrawGasFee, bytes memory response) external {
+        // have a signature for the gas fee.
+
+        SismoConnectVerifiedResult memory result = verify({
+            responseBytes: response,
+            auth: buildAuth({authType: AuthType.VAULT}),
+            signature: buildSignature({message: abi.encodePacked(withdrawGasFee)})
+        });
+
+        uint256 vaultId = result.getUserId(AuthType.VAULT);
+
+        if (withdrawGasFee > DEPOSIT_AMOUNT) {
+            revert GasFeeHigherThanWithdraw();
+        }
+
         PendingRedeem storage pendingRedeem = vaultIdToRedeemInformation[vaultId];
-        uint256 gas = pendingRedeem.gasFee + withdrawGasFee; //TODO: gasFee < maxWithdraw
+        uint256 gas = pendingRedeem.gasFee + withdrawGasFee;
         IERC20 bridgedToken = IERC20(tokenAddress);
 
         if (keccak256(abi.encode(pendingRedeem)) == nullRedeemInformation) {
@@ -136,9 +156,10 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     }
 
     /**
-     * @notice broadcast to other chains that claim has already been made
-     * @param vaultId : vaultId to the user.
+    @dev interface 
      */
+
+
     function registerRedeem(uint256 vaultId, uint32 _otherChainId, uint256 gasFee) external {
         // attacker tries to use the proof in another chain
         // for now this is reverted, however this mechanism might need ot be handled more cautiously.
