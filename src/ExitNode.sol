@@ -126,7 +126,7 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
             revert notInPendingList(vaultId);
         }
 
-        bridgedToken.transferFrom(msg.sender, address(this), gas);
+        bridgedToken.transferFrom(address(this), msg.sender, gas);
 
         // remove from pending redeems
 
@@ -157,8 +157,6 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
          address _inbox,
          address _outbox
     ) private {
-        
-    
-
     }
+
 }
