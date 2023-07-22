@@ -14,3 +14,6 @@
 	path = lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
 	branch = v4.9.2
+[submodule "lib/hyperlane-monorepo"]
+	path = lib/hyperlane-monorepo
+	url = https://github.com/TyphoonCashX/hyperlane-monorepo
