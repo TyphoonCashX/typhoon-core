@@ -1,5 +1,4 @@
-git push
-icense-Identifier: UNLICENSED
+//License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
 import "./IEnterNode.sol";
@@ -21,8 +20,6 @@ contract EnterNode is IEnterNode {
     
 
     function deposit() external payable returns (bool) {
-        
-        require()
     }
 
 
