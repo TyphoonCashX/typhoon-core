@@ -4,3 +4,6 @@
 [submodule "lib/hyperlane-quickstart"]
 	path = lib/hyperlane-quickstart
 	url = https://github.com/TyphoonCashX/hyperlane-quickstart
+[submodule "lib/ccip-cross-chain-name-service"]
+	path = lib/ccip-cross-chain-name-service
+	url = https://github.com/TyphoonCashX/ccip-cross-chain-name-service
