@@ -3,7 +3,7 @@ pragma solidity ^0.8.13;
 
 interface IExitNode {
     /**
-    Redeem funds.
+     * Redeem funds.
      */
 
     function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external;
