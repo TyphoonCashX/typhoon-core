@@ -11,7 +11,7 @@ contract HyperBridge is Owned {
     uint32[] private destinationList;
     mapping(uint32 => address) private destinationToRecipient;
 
-    address public enterNode;
+    address public exitNode;
     IMailbox outbox;
     IMailbox inbox;
     string public lastMessage;
@@ -19,8 +19,8 @@ contract HyperBridge is Owned {
     event ReceivedMessage(uint32 origin, bytes32 sender, bytes message);
     event SentMessage(uint32 destinationDomain, bytes32 recipient, bytes message);
 
-    modifier onlyEnterNode(){
-        require(msg.sender == enterNode, "not enter node");
+    modifier onlyExitNode(){
+        require(msg.sender == exitNode, "not enter node");
         _;
     }
     
@@ -40,9 +40,9 @@ contract HyperBridge is Owned {
         return false;
     }
 
-    constructor(address _enterNode, uint32 _chainId, address _inbox, address _outbox) 
+    constructor(address _exitNode, uint32 _chainId, address _inbox, address _outbox, address admin) 
     Owned(msg.sender){
-        enterNode = _enterNode;
+        exitNode = _exitNode;
         chainId = _chainId;
         outbox = IMailbox(_outbox);
         inbox = IMailbox(_inbox);

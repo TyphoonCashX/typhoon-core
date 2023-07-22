@@ -14,17 +14,8 @@ contract EnterNode is IEnterNode {
 
     event FireDeposit(address indexed sender);
 
-<<<<<<< HEAD
-    function deposit() external payable returns (bool) {
-        bool tx_emitted = IERC20(msg.sender).transferFrom(
-            msg.sender,
-            address(this),
-            DEPOSIT_AMOUNT);
-        
-=======
     function deposit() external payable {
         IERC20(msg.sender).transferFrom(msg.sender, address(this), DEPOSIT_AMOUNT);
->>>>>>> main
         registry.push(msg.sender);
         emit FireDeposit(msg.sender);
     }
