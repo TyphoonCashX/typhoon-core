@@ -59,13 +59,12 @@ contract HyperBridgeModule is Owned, IBridgeModule {
 
     /**
     @notice constructor
-    @param _exitNode : address of the Exit smart contract, handling withdrawal of funds on the destination chain 
     @param _chainId : chain id of the exit node contract 
     @param _mailbox : address of the hyperlane contract
     @param admin : owner 
      */
 
-    constructor(address _exitNode, uint32 _chainId, address _inbox, address _outbox, address admin) Owned(admin) {
+    constructor(uint32 _chainId, address _mailbox, address admin) Owned(admin) {
         exitNode = msg.sender;
         thisChainId = _chainId;
         outbox = IMailbox(_mailbox);
