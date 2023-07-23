@@ -17,9 +17,9 @@ contract HyperlaneDeployScript is Script {
     string chainName;
 
 
-    //TODO: clean the list of string (chain names)
+
     string[] chainNameList = [
-        "Alfajores", "BSC Testnet", "Fuji", "Goerli", "Sepolia", "Mumbai", "Moonbase Alpha", "Moonbeam", "gnosistestnet", "neondevnet", "mantletestnet", "tenettestnet"
+        "Fuji", "Goerli", "Sepolia", "Mumbai", "Moonbeam", "gnosis", "neondevnet", "mantletestnet", "tenettestnet", "ZKSync", "Linea", "PolygonZkEVM", "ZetaChain"
     ];
     //and a mapping string to identifier
     mapping(string => uint32) nameToChainId;
@@ -73,22 +73,25 @@ contract HyperlaneDeployScript is Script {
         nameToChainId["PolygonZkEVM"] = 1422;
         nameToChainId["Linea"] = 59140;
         nameToChainId["ZKSync"] = 280;
+        nameToChainId["ZetaChain"] = 7001;
     }
     
     function _setUpNameToMailbox() private {
         nameToMailbox["Mumbai"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
-        nameToChainId["Sepolia"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
+        nameToMailbox["Sepolia"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
         nameToMailbox["gnosis"] = 0x87529d295182f52677a04Fe2Fbc78dDFB34971AA;
-        nameToChainId["neondevnet"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
-        nameToChainId["mantletestnet"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
-        nameToChainId["tenettestnet"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
-        nameToChainId["goerli"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
+        nameToMailbox["neondevnet"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
+        nameToMailbox["mantletestnet"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
+        nameToMailbox["tenettestnet"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
+        nameToMailbox["goerli"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
+        nameToMailbox["Polygon"] =0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70;
     }
 
     function _setUpChainNameToAppId() private {
         nameToAppId["goerli"] = bytes16(0x86f7dc8c2769b53552d88cca6e2cd94c);
         nameToAppId["gnosis"] = bytes16(0x4ad9f13225bde18e73a358219a573713);
         nameToAppId["Mumbai"] = bytes16(0x23d532b6f1b5a1811a929ead1c89d26f);
+        nameToAppId["Polygon"] = bytes16(0x8dff3c2056749b30ce4c0f5d416e9dfe);
         nameToAppId["mantletestnet"] = bytes16(0x6bfd8840ad9488b56b0f5e9a8b77d086);
         nameToAppId["neondevnet"] = bytes16(0x29af9969b30280023bc416ba2ac010fa);
         nameToAppId["tenettestnet"] = bytes16(0x05936cd551f2964aaffca01afe81119e);
@@ -96,7 +99,8 @@ contract HyperlaneDeployScript is Script {
     }
 
     function _setUpChainNameToPaymaster() private {
-        nameToPaymaster["goerli"] = 0xF90cB82a76492614D07B82a7658917f3aC811Ac1;
-        nameToPaymaster["gnosis"] = 0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc;
+        nameToPaymaster["goerli"] = 0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a;
+        nameToPaymaster["gnosis"] = 0x6cA0B6D22da47f091B7613223cD4BB03a2d77918;
+        nameToPaymaster["Polygon"] = 0x6cA0B6D22da47f091B7613223cD4BB03a2d77918;
     }
 }

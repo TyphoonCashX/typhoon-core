@@ -14,7 +14,7 @@ contract HyperBridgeModule is Owned, IBridgeModule {
     uint32 public thisChainId;
     uint32[] private destinationList;
     mapping(uint32 => address) private chainToRecipient;
-    //TODO: add conversion mapping
+    // conversion mapping
     mapping(uint32 => uint256) private chainToConversion;
     address public exitNode;
     IMailbox mailbox;
@@ -114,19 +114,9 @@ contract HyperBridgeModule is Owned, IBridgeModule {
      */
 
     function handle(uint32 _origin, bytes32 _sender, bytes calldata _message) external {
-        //TODO have a modifier so only the bridge can call this function
-        //TODO: add a mapping from destination to recipient to verify that it is an actual recipient with a setter
+        require(chainToRecipient[_origin] == _sender, "sender not allowed");
         (uint256 vaultId, uint32 _otherChainId, uint256 gasFee) = abi.decode(_message, (uint256, uint32, uint256));
         IExitNode(exitNode).registerRedeem(vaultId, _otherChainId, gasFee);
         emit ReceivedMessage(_origin, _sender, _message);
     }
-
-    //// modifier
-    //TODO
-    //modifier onlyBridgeAdapter(address caller) {
-    //if (caller != hyperBridgeAddress){
-    //revert isNotHyperplaneCaller(caller);
-    //}
-    //_;
-    //}
 }

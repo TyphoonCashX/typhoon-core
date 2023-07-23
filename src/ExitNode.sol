@@ -74,7 +74,6 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
 
 
 
-    //TODO: make this payable to get the money for the bridging
     function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external payable {
         // make sur that gas fees are not higher than the maximal deposit amount.
         if (redeemGasFee > DEPOSIT_AMOUNT) {
@@ -112,10 +111,13 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
 
         vaultIdToRedeemInformation[vaultId] = pendingRedeem;
 
-        // create the bridge module and broadcast the register.
+        // use the bridge module interface and broadcast the registered vaultId
 
         IBridgeModule bridgeModule = IBridgeModule(bridgeModuleAddress);
+        //sending the value to the broadcast contract to pay the bridge
         bridgeModule.broadcastRegister{value : msg.value}(vaultId);
+        //paying the relayer
+        IERC20(tokenAddress).transfer(msg.sender, redeemGasFee);
     }
 
     /**
@@ -150,7 +152,8 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
         // remove from pending redeems
 
         delete vaultIdToRedeemInformation[vaultId];
-
+        //paying the relayer
+        bridgedToken.transfer(msg.sender, withdrawGasFee);
         bridgedToken.transfer(pendingRedeem.outputAddress, DEPOSIT_AMOUNT - gas);
     }
 
