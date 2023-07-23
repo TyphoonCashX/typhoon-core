@@ -1,17 +1,13 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "./IExitNode.sol";
-import "sismo-connect-solidity/SismoConnectLib.sol";
-import "sismo-connect-solidity/utils/SismoConnectHelper.sol";
+import "../IExitNode.sol";
 import "openzeppelin/token/ERC20/IERC20.sol";
 import "openzeppelin/access/Ownable.sol";
-import "./HyperBridgeModule.sol";
-import "./IBridgeModule.sol";
+import "../HyperBridgeModule.sol";
+import "../IBridgeModule.sol";
 
-contract ExitNode is IExitNode, SismoConnect, Ownable {
-
-    using SismoConnectHelper for SismoConnectVerifiedResult;
+contract ExitNode is IExitNode, Ownable {
 
     bool private _isImpersonationMode = true;
 
@@ -57,7 +53,6 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
     // constructor
 
     constructor(address _tokenAddress, bytes16 _appId, uint32 _chainId, address _mailbox, address _paymaster)
-        SismoConnect(buildConfig(_appId, _isImpersonationMode))
         Ownable()
     {
         tokenAddress = _tokenAddress;
@@ -72,9 +67,6 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
     @dev interface 
      */
 
-
-
-    //TODO: make this payable to get the money for the bridging
     function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external payable {
         // make sur that gas fees are not higher than the maximal deposit amount.
         if (redeemGasFee > DEPOSIT_AMOUNT) {
@@ -85,13 +77,13 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
             revert zeroAddress();
         }
 
-        SismoConnectVerifiedResult memory result = verify({
-            responseBytes: response,
-            auth: buildAuth({authType: AuthType.VAULT}),
-            signature: buildSignature({message: abi.encodePacked(redeemGasFee, outputAddress)})
-        });
+        //SismoConnectVerifiedResult memory result = verify({
+            //responseBytes: response,
+            //auth: buildAuth({authType: AuthType.VAULT}),
+            //signature: buildSignature({message: abi.encodePacked(redeemGasFee, outputAddress)})
+        //});
 
-        uint256 vaultId = result.getUserId(AuthType.VAULT);
+        uint256 vaultId = 1;//result.getUserId(AuthType.VAULT);
 
         if (vaultId == 0x0) {
             revert zeroVaultId();
@@ -125,13 +117,13 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
     function withdraw(uint256 withdrawGasFee, bytes memory response) external {
         // have a signature for the gas fee.
 
-        SismoConnectVerifiedResult memory result = verify({
-            responseBytes: response,
-            auth: buildAuth({authType: AuthType.VAULT}),
-            signature: buildSignature({message: abi.encodePacked(withdrawGasFee)})
-        });
+        //SismoConnectVerifiedResult memory result = verify({
+        //    responseBytes: response,
+        //    auth: buildAuth({authType: AuthType.VAULT}),
+        //    signature: buildSignature({message: abi.encodePacked(withdrawGasFee)})
+        //});
 
-        uint256 vaultId = result.getUserId(AuthType.VAULT);
+        uint256 vaultId = 1;//result.getUserId(AuthType.VAULT);
 
         if (withdrawGasFee > DEPOSIT_AMOUNT) {
             revert GasFeeHigherThanWithdraw();
@@ -149,7 +141,7 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
 
         // remove from pending redeems
 
-        delete vaultIdToRedeemInformation[vaultId];
+        //delete vaultIdToRedeemInformation[vaultId];
 
         bridgedToken.transfer(pendingRedeem.outputAddress, DEPOSIT_AMOUNT - gas);
     }

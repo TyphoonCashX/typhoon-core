@@ -7,7 +7,7 @@ interface IBridgeModule {
     @notice broadact the pending registry to all the chains
     @param newVaultId : new vaultId in the pending registry 
      */
-    function broadcastRegister(uint256 newVaultId) external;
+    function broadcastRegister(uint256 newVaultId) external payable;
 
     /**
     @notice getter for the chain id

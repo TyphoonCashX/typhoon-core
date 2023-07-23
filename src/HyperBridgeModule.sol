@@ -3,6 +3,8 @@ pragma solidity ^0.8.13;
 
 import "solmate/auth/Owned.sol";
 import "hyperlane-monorepo/solidity/contracts/interfaces/IMailbox.sol";
+
+import "hyperlane-monorepo/solidity/contracts/interfaces/IInterchainGasPaymaster.sol";
 import "./IBridgeModule.sol";
 import "./IExitNode.sol";
 
@@ -11,12 +13,13 @@ contract HyperBridgeModule is Owned, IBridgeModule {
     // state variable declaration
     uint32 public thisChainId;
     uint32[] private destinationList;
-    mapping(uint32 => address) private destinationToRecipient;
+    mapping(uint32 => address) private chainToRecipient;
     //TODO: add conversion mapping
+    mapping(uint32 => uint256) private chainToConversion;
     address public exitNode;
-    IMailbox outbox;
-    IMailbox inbox;
+    IMailbox mailbox;
     string public lastMessage;
+    IInterchainGasPaymaster igp;
 
     // events
 
@@ -30,6 +33,14 @@ contract HyperBridgeModule is Owned, IBridgeModule {
         _;
     }
 
+    function _getConversion(uint32 chainId) private returns(uint256 rate){
+        rate = chainToConversion[chainId];
+        if (rate != 0){
+            return rate;
+        }
+        return 1;
+    } 
+
     /**
     @notice Adds an id to the destination chain and stores the id in the mapping
     @param newdestination : chain id of the new destination chain
@@ -38,7 +49,7 @@ contract HyperBridgeModule is Owned, IBridgeModule {
 
     function addDestination(uint32 newdestination, address newDestinationRecipient) external onlyOwner {
         destinationList.push(newdestination);
-        destinationToRecipient[newdestination] = newDestinationRecipient;
+        chainToRecipient[newdestination] = newDestinationRecipient;
     }
 
     /**
@@ -47,7 +58,7 @@ contract HyperBridgeModule is Owned, IBridgeModule {
      */
 
     function removeDestination(uint32 _destination) external onlyOwner returns (bool) {
-        delete destinationToRecipient[_destination];
+        delete chainToRecipient[_destination];
         for (uint256 i; i < destinationList.length; ++i) {
             if (destinationList[i] == _destination) {
                 delete destinationList[i];
@@ -64,27 +75,33 @@ contract HyperBridgeModule is Owned, IBridgeModule {
     @param admin : owner 
      */
 
-    constructor(uint32 _chainId, address _mailbox, address admin) Owned(admin) {
+    constructor(uint32 _chainId, address _mailbox, address payMaster, address admin) Owned(admin) {
         exitNode = msg.sender;
         thisChainId = _chainId;
-        outbox = IMailbox(_mailbox);
-        inbox = IMailbox(_mailbox);
+        mailbox = IMailbox(_mailbox);
     }
 
     /**
     @dev interface
      */
-
-
-    function broadcastRegister(uint256 newVaultId) external onlyExitNode {
+    
+    function broadcastRegister(uint256 newVaultId) external payable onlyExitNode {
         bytes memory encoded = abi.encodePacked(newVaultId);
         uint32 _destinationDomain;
         address _destinationRecipient;
         for (uint256 i; i < destinationList.length; i++) {
             _destinationDomain = destinationList[i];
-            _destinationRecipient = destinationToRecipient[_destinationDomain];
+            _destinationRecipient = chainToRecipient[_destinationDomain];
             bytes32 recipient = bytes32(uint256(uint160(_destinationRecipient)) << 96);
-            outbox.dispatch(_destinationDomain, recipient, encoded);
+            bytes32 messageId = mailbox.dispatch(_destinationDomain, recipient, encoded);
+            uint256 valueSent = 100000 * _getConversion(_destinationDomain);
+            uint256 gasAmount = 100000;
+            igp.payForGas{ value: valueSent}(
+                messageId, // The ID of the message that was just dispatched
+                _destinationDomain, // The destination domain of the message
+                gasAmount, // 100k gas to use in the recipient's handle function
+                msg.sender // refunds go to msg.sender, who paid the msg.value
+            );
             emit SentMessage(_destinationDomain, recipient, encoded);
         }
     }

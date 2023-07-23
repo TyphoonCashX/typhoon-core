@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 import "forge-std/Script.sol";
 
 import "../src/EnterNode.sol";
-import "../src/ExitNode.sol";
+import "../src/Mock/ExitNodeMock.sol";
 import "../src/HyperBridgeModule.sol";
 
 import "../src/customERC20/customToken.sol";
@@ -37,7 +37,7 @@ contract HyperlaneDeployScript is Script {
     HyperBridgeModule bridgeModule;
 
     function setUp() public {
-        chainName = "Mumbai";//TODO
+        chainName = "neondevnet";//TODO
         //TODO: _setUpNameToAppId();
         _setUpNameToChainId();
         _setUpChainNameToAppId();
@@ -70,6 +70,8 @@ contract HyperlaneDeployScript is Script {
         nameToChainId["mantletestnet"] = 5001;
         nameToChainId["tenettestnet"] = 155;
         nameToChainId["goerli"] = 5;
+        nameToChainId["PolygonZkEVM"] = 1422;
+        nameToChainId["Linea"] = 59140;
     }
     
     function _setUpNameToMailbox() private {
