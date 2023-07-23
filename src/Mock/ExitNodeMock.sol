@@ -1,17 +1,13 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "./IExitNode.sol";
-import "sismo-connect-solidity/SismoConnectLib.sol";
-import "sismo-connect-solidity/utils/SismoConnectHelper.sol";
+import "../IExitNode.sol";
 import "openzeppelin/token/ERC20/IERC20.sol";
 import "openzeppelin/access/Ownable.sol";
-import "./HyperBridgeModule.sol";
-import "./IBridgeModule.sol";
+import "../HyperBridgeModule.sol";
+import "../IBridgeModule.sol";
 
-contract ExitNode is IExitNode, SismoConnect, Ownable {
-
-    using SismoConnectHelper for SismoConnectVerifiedResult;
+contract ExitNode is IExitNode, Ownable {
 
     bool private _isImpersonationMode = true;
 
@@ -20,7 +16,7 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
     address public constant ZERO_ADDRESS = address(0x0);
     uint256 public constant DEPOSIT_AMOUNT = 10 * 10 ** 18;
 
-    // final
+    //final
     address public bridgeModuleAddress;
 
     // token address
@@ -57,7 +53,6 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
     // constructor
 
     constructor(address _tokenAddress, bytes16 _appId, uint32 _chainId, address _mailbox, address _paymaster)
-        SismoConnect(buildConfig(_appId, _isImpersonationMode))
         Ownable()
     {
         tokenAddress = _tokenAddress;
@@ -69,7 +64,7 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
     }
 
     /**
-     * @dev interface
+    @dev interface 
      */
 
     function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external payable {
@@ -82,13 +77,13 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
             revert zeroAddress();
         }
 
-        SismoConnectVerifiedResult memory result = verify({
-            responseBytes: response,
-            auth: buildAuth({authType: AuthType.VAULT}),
-            signature: buildSignature({message: abi.encodePacked(redeemGasFee, outputAddress)})
-        });
+        //SismoConnectVerifiedResult memory result = verify({
+            //responseBytes: response,
+            //auth: buildAuth({authType: AuthType.VAULT}),
+            //signature: buildSignature({message: abi.encodePacked(redeemGasFee, outputAddress)})
+        //});
 
-        uint256 vaultId = result.getUserId(AuthType.VAULT);
+        uint256 vaultId = 1;//result.getUserId(AuthType.VAULT);
 
         if (vaultId == 0x0) {
             revert zeroVaultId();
@@ -109,29 +104,26 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
 
         vaultIdToRedeemInformation[vaultId] = pendingRedeem;
 
-        // use the bridge module interface and broadcast the registered vaultId
+        // create the bridge module and broadcast the register.
 
         IBridgeModule bridgeModule = IBridgeModule(bridgeModuleAddress);
-        //sending the value to the broadcast contract to pay the bridge
         bridgeModule.broadcastRegister{value : msg.value}(vaultId);
-        //paying the relayer
-        IERC20(tokenAddress).transfer(msg.sender, redeemGasFee);
     }
 
     /**
-     * @dev interface
+    @dev interface 
      */
 
     function withdraw(uint256 withdrawGasFee, bytes memory response) external {
         // have a signature for the gas fee.
 
-        SismoConnectVerifiedResult memory result = verify({
-            responseBytes: response,
-            auth: buildAuth({authType: AuthType.VAULT}),
-            signature: buildSignature({message: abi.encodePacked(withdrawGasFee)})
-        });
+        //SismoConnectVerifiedResult memory result = verify({
+        //    responseBytes: response,
+        //    auth: buildAuth({authType: AuthType.VAULT}),
+        //    signature: buildSignature({message: abi.encodePacked(withdrawGasFee)})
+        //});
 
-        uint256 vaultId = result.getUserId(AuthType.VAULT);
+        uint256 vaultId = 1;//result.getUserId(AuthType.VAULT);
 
         if (withdrawGasFee > DEPOSIT_AMOUNT) {
             revert GasFeeHigherThanWithdraw();
@@ -149,15 +141,15 @@ contract ExitNode is IExitNode, SismoConnect, Ownable {
 
         // remove from pending redeems
 
-        delete vaultIdToRedeemInformation[vaultId];
-        //paying the relayer
-        bridgedToken.transfer(msg.sender, withdrawGasFee);
+        //delete vaultIdToRedeemInformation[vaultId];
+
         bridgedToken.transfer(pendingRedeem.outputAddress, DEPOSIT_AMOUNT - gas);
     }
 
     /**
-     * @dev interface
+    @dev interface 
      */
+
 
     function registerRedeem(uint256 vaultId, uint32 _otherChainId, uint256 gasFee) external {
         // attacker tries to use the proof in another chain
