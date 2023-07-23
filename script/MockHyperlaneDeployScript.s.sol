@@ -31,7 +31,7 @@ contract HyperlaneDeployScript is Script {
     HyperBridgeModule bridgeModule;
 
     function setUp() public {
-        chainName = "neondevnet";//TODO
+        chainName = "PolygonZkEVM";//TODO
         _setUpNameToChainId();
         _setUpChainNameToAppId();
         _setUpChainNameToPaymaster();
