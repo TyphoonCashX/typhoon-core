@@ -17,28 +17,21 @@ contract HyperlaneDeployScript is Script {
     string chainName;
 
 
-    //TODO: clean the list of string (chain names)
     string[] chainNameList = [
-        "Alfajores", "BSC Testnet", "Fuji", "Goerli", "Sepolia", "Mumbai", "Moonbase Alpha", "Moonbeam", "gnosistestnet", "neondevnet", "mantletestnet", "tenettestnet"
+        "Fuji", "Goerli", "Sepolia", "Mumbai", "Moonbeam", "gnosis", "neondevnet", "mantletestnet", "tenettestnet", "ZKSync", "Linea", "PolygonZkEVM", "ZetaChain"
     ];
     //and a mapping string to identifier
     mapping(string => uint32) nameToChainId;
     mapping(string => address) nameToMailbox;
     mapping(string => bytes16) nameToAppId;
     mapping(string => address) nameToPaymaster;
-    //string to token
-    //iterate on the list to mint enough tokens
 
-    //TODO: test sismo
-    uint32 chainId;
-    address _chainMailbox;
 
     CustomToken bertoken;
     HyperBridgeModule bridgeModule;
 
     function setUp() public {
         chainName = "neondevnet";//TODO
-        //TODO: _setUpNameToAppId();
         _setUpNameToChainId();
         _setUpChainNameToAppId();
         _setUpChainNameToPaymaster();

@@ -114,7 +114,8 @@ contract HyperBridgeModule is Owned, IBridgeModule {
      */
 
     function handle(uint32 _origin, bytes32 _sender, bytes calldata _message) external {
-        require(chainToRecipient[_origin] == _sender, "sender not allowed");
+        bytes32 recipient = bytes32(uint256(uint160(chainToRecipient[_origin])) << 96);
+        require(recipient == _sender, "sender not allowed");
         (uint256 vaultId, uint32 _otherChainId, uint256 gasFee) = abi.decode(_message, (uint256, uint32, uint256));
         IExitNode(exitNode).registerRedeem(vaultId, _otherChainId, gasFee);
         emit ReceivedMessage(_origin, _sender, _message);

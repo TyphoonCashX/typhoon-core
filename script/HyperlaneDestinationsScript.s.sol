@@ -16,7 +16,7 @@ contract HyperlaneDestinationsScript is Script {
 
 
     function setUp() public {
-        chosenChain = "";//TODO
+        chosenChain = "gnosis";
         vm.startBroadcast(vm.envUint("PRIVATE_KEY"));
     }
 

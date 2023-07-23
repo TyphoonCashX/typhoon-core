@@ -26,19 +26,12 @@ contract HyperlaneDeployScript is Script {
     mapping(string => address) nameToMailbox;
     mapping(string => bytes16) nameToAppId;
     mapping(string => address) nameToPaymaster;
-    //string to token
-    //iterate on the list to mint enough tokens
-
-    //TODO: test sismo
-    uint32 chainId;
-    address _chainMailbox;
 
     CustomToken bertoken;
     HyperBridgeModule bridgeModule;
 
     function setUp() public {
         chainName = "Mumbai";//TODO
-        //TODO: _setUpNameToAppId();
         _setUpNameToChainId();
         _setUpChainNameToAppId();
         _setUpChainNameToPaymaster();
