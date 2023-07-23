@@ -7,7 +7,6 @@ import "./IBridgeModule.sol";
 import "./IExitNode.sol";
 
 contract HyperBridgeModule is Owned, IBridgeModule {
-
     // state variable declaration
     uint32 public thisChainId;
     uint32[] private destinationList;
@@ -31,9 +30,9 @@ contract HyperBridgeModule is Owned, IBridgeModule {
     }
 
     /**
-    @notice Adds an id to the destination chain and stores the id in the mapping
-    @param newdestination : chain id of the new destination chain
-    @param newDestinationRecipient : smart contract address on the destination chain where the funds will be deposited
+     * @notice Adds an id to the destination chain and stores the id in the mapping
+     * @param newdestination : chain id of the new destination chain
+     * @param newDestinationRecipient : smart contract address on the destination chain where the funds will be deposited
      */
 
     function addDestination(uint32 newdestination, address newDestinationRecipient) external onlyOwner {
@@ -42,8 +41,8 @@ contract HyperBridgeModule is Owned, IBridgeModule {
     }
 
     /**
-    @notice remove the chain id of the destination chain
-    @param _destination : chain id of the destination chain to be removed
+     * @notice remove the chain id of the destination chain
+     * @param _destination : chain id of the destination chain to be removed
      */
 
     function removeDestination(uint32 _destination) external onlyOwner returns (bool) {
@@ -58,11 +57,11 @@ contract HyperBridgeModule is Owned, IBridgeModule {
     }
 
     /**
-    @notice constructor
-    @param _exitNode : address of the Exit smart contract, handling withdrawal of funds on the destination chain 
-    @param _chainId : chain id of the exit node contract 
-    @param _mailbox : address of the hyperlane contract
-    @param admin : owner 
+     * @notice constructor
+     * @param _exitNode : address of the Exit smart contract, handling withdrawal of funds on the destination chain
+     * @param _chainId : chain id of the exit node contract
+     * @param _mailbox : address of the hyperlane contract
+     * @param admin : owner
      */
 
     constructor(address _exitNode, uint32 _chainId, address _inbox, address _outbox, address admin) Owned(admin) {
@@ -73,9 +72,8 @@ contract HyperBridgeModule is Owned, IBridgeModule {
     }
 
     /**
-    @dev interface
+     * @dev interface
      */
-
 
     function broadcastRegister(uint256 newVaultId) external onlyExitNode {
         bytes memory encoded = abi.encodePacked(newVaultId);
@@ -91,10 +89,10 @@ contract HyperBridgeModule is Owned, IBridgeModule {
     }
 
     /**
-    @notice send messages
-    @param _origin : chain id of the chain of origin 
-    @param _sender : transactions sender 
-    @param _message : broadcasted message
+     * @notice send messages
+     * @param _origin : chain id of the chain of origin
+     * @param _sender : transactions sender
+     * @param _message : broadcasted message
      */
 
     function handle(uint32 _origin, bytes32 _sender, bytes calldata _message) external {

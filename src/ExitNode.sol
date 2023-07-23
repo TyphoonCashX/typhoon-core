@@ -10,7 +10,6 @@ import "./HyperBridgeModule.sol";
 import "./IBridgeModule.sol";
 
 contract ExitNode is IExitNode, SismoConnect, Owned {
-
     using SismoConnectHelper for SismoConnectVerifiedResult;
 
     bool private _isImpersonationMode = true;
@@ -20,7 +19,7 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     address public constant ZERO_ADDRESS = address(0x0);
     uint256 public constant DEPOSIT_AMOUNT = 10 * 10 ** 18;
 
-    //final
+    // final
     address public bridgeModuleAddress;
 
     // token address
@@ -68,10 +67,8 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     }
 
     /**
-    @dev interface 
+     * @dev interface
      */
-
-
 
     //TODO: make this payable to get the money for the bridging
     function redeem(bytes memory response, uint256 redeemGasFee, address outputAddress) external payable {
@@ -119,7 +116,7 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     }
 
     /**
-    @dev interface 
+     * @dev interface
      */
 
     function withdraw(uint256 withdrawGasFee, bytes memory response) external {
@@ -155,9 +152,8 @@ contract ExitNode is IExitNode, SismoConnect, Owned {
     }
 
     /**
-    @dev interface 
+     * @dev interface
      */
-
 
     function registerRedeem(uint256 vaultId, uint32 _otherChainId, uint256 gasFee) external {
         // attacker tries to use the proof in another chain
