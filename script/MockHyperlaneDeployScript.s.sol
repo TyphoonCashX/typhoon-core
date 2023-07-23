@@ -72,16 +72,17 @@ contract HyperlaneDeployScript is Script {
         nameToChainId["goerli"] = 5;
         nameToChainId["PolygonZkEVM"] = 1422;
         nameToChainId["Linea"] = 59140;
+        nameToChainId["ZKSync"] = 280;
     }
     
     function _setUpNameToMailbox() private {
         nameToMailbox["Mumbai"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
-        //nameToChainId["Sepolia"] = 11155111;
+        nameToChainId["Sepolia"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
         nameToMailbox["gnosis"] = 0x87529d295182f52677a04Fe2Fbc78dDFB34971AA;
-        //nameToChainId["neondevnet"] = 245022926;
-        //nameToChainId["mantletestnet"] = 5001;
-        //nameToChainId["tenettestnet"] = 155;
-        //nameToChainId["goerli"] = 5;
+        nameToChainId["neondevnet"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
+        nameToChainId["mantletestnet"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
+        nameToChainId["tenettestnet"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
+        nameToChainId["goerli"] = 0xCC737a94FecaeC165AbCf12dED095BB13F037685;
     }
 
     function _setUpChainNameToAppId() private {
